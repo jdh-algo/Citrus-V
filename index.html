@@ -96,6 +96,19 @@ pre, code {
 .centered-table.large-text {
   font-size: 40px;
 }
+
+.house-icon {
+  fill: #333;
+  transition: fill 0.3s ease;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.house-icon:hover {
+  fill: #0366d6;
+}
+
     </style>
 </head>
 
@@ -111,6 +124,11 @@ pre, code {
     <div class="navbar-menu">
         <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
 
+          <a href="https://github.com/jdh-algo" title="GitHub主页" class="home-link">
+            <svg class="house-icon" viewBox="0 0 24 24" width="24" height="24">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+          </a>
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link">
                     More Research
