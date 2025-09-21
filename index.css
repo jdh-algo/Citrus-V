@@ -1,0 +1,229 @@
+video.banner {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #363636;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.centered {
+  text-align: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  color: #3273dc;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+ul {
+  font-size: 16px;
+}
+
+.flex {
+  display: flex;
+}
+
+.column-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-gap {
+  gap: 8px;
+}
+
+button {
+  outline: none;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  text-align: center;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  user-select: none;
+  touch-action: manipulation;
+  font-size: 16px;
+  line-height: 1.5;
+  height: 40px;
+  color: #fff;
+  background: #363636;
+  border-radius: 40px;
+  padding-inline-start: 20px;
+  padding-inline-end: 20px;
+}
+
+button:hover {
+  background: #000;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 44px;
+  margin-bottom: 0em;
+}
+
+h3 {
+  font-size: 36px;
+  margin-bottom: 0em;
+  margin-top: 1.5em;
+}
+
+#title-flex {
+  text-align: center;
+  max-width: 960px;
+  padding: 0 16px;
+  row-gap: 8px;
+}
+
+#abstract-flex {
+  max-width: 960px;
+  padding: 0 16px;
+}
+
+#sections {
+  width: calc(100vw - 16px);
+  max-width: 1280px;
+}
+
+#sections h3,
+#sections p {
+  width: 100%;
+  padding: 0 16px;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+}
+
+.responsive-image-container {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.responsive-image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Ensure the image is displayed as a block element */
+  max-width: none;
+  /* Reset the max-width property */
+}
+
+.video-container {
+  overflow: hidden;
+}
+
+.video-container>video {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  clip-path: inset(2px);
+  border-radius: 20px;
+}
+
+.video-slider {
+  width: 100%;
+}
+
+.image-slider {
+  position: relative;
+  width: 1200px;
+  height: 700px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.image-slider img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.image-slider img.active {
+  opacity: 1;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  z-index: 10;
+}
+
+.slider-btn.left { left: 10px; }
+.slider-btn.right { right: 10px; }
+
+/* 圆点容器放到图片下方 */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;   /* 和图片间距 */
+}
+
+.slider-dots span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: gray;     /* 未选中颜色 */
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-dots span.active {
+  background: black;    /* 当前图片颜色 */
+}
+
+#sections h4,
+#sections h5,
+#sections h6 {
+  width: 100%;          /* 跟随父容器宽度 */
+  padding: 0 16px;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  font-size: 24px;      /* 可根据需要调整 */
+  font-weight: 400;     /* 普通文字 */
+  text-align: justify;     /* 默认靠左 */
+}
+
+/* 可选居中 */
+#sections h4.centered,
+#sections h5.centered,
+#sections h6.centered {
+  text-align: center;
+}

@@ -1,0 +1,1127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="Open-Sans.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title></title>
+  <script defer="defer" src="./static/js/main.cb41f6a5.js"></script>
+  <link href="./static/css/main.4017e162.css" rel="stylesheet">
+  <meta name="description"
+        content="Tittle here">
+  <title>Tittle here</title>
+  <style>
+.demo-video {
+  width: 100%;        /* 默认占满容器宽度 */
+  height: auto;       /* 保持比例 */
+  display: block;
+  margin: 0 auto;     /* 居中 */
+  max-width: 1600px;
+}
+p {
+  text-align: justify;  /* 两端对齐 */
+}
+pre, code {
+  display: block;           /* 保证占满整行 */
+  width: 100%;              /* 宽度 100% */
+  background-color: #f5f5f5; /* 灰色背景 */
+  padding: 10px;            /* 内边距 */
+  overflow-x: auto;         /* 内容太长可水平滚动 */
+  box-sizing: border-box;   /* 包含 padding */
+  border-radius: 5px;       /* 可选：圆角 */
+}
+.comparison-text-left {
+  font-size: 20px;        /* 调整字体大小 */
+  margin: 10px 0;
+  position: relative;
+  left: 0;                /* 靠屏幕最左边 */
+  text-align: left;
+  width: auto;            /* 不受父容器限制 */
+}
+
+.centered-table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: auto;              
+  font-size: 16px;          
+}
+
+.centered-table th{
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: center;       /* 水平居中 */
+  vertical-align: middle;   /* 垂直居中 */
+  font-size: 16px;          /* 设置文字大小 */
+}
+.centered-table td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: center;       /* 水平居中 */
+  vertical-align: middle;   /* 垂直居中 */
+  font-size: 16px;          /* 设置文字大小 */
+}
+
+.centered-table thead tr {
+  background-color: #f0f0f0;
+}
+
+/* td 内的所有直接子元素（例如 div 或 p）也居中 */
+.centered-table td > * {
+  display: inline-block;    /* 转成行内块，宽度不撑满 td */
+  text-align: center;       /* 内容居中 */
+  margin: 0 auto;           /* 整体居中 */
+}
+.centered-table th > * {
+  display: inline-block;    /* 转成行内块，宽度不撑满 td */
+  text-align: center;       /* 内容居中 */
+  margin: 0 auto;           /* 整体居中 */
+}
+
+.centered-table thead tr {
+  background-color: #f0f0f0; /* 首行灰色背景 */
+}
+
+/* 单元格自定义边框类 */
+.centered-table .cell-border { border: 1px solid #000; }        /* 全边框 */
+.centered-table .cell-top { border-top: 1px solid #000; }       /* 仅上边框 */
+.centered-table .cell-bottom { border-bottom: 1px solid #000; }/* 仅下边框 */
+.centered-table .cell-left { border-left: 1px solid #000; }     /* 仅左边框 */
+.centered-table .cell-right { border-right: 1px solid #000; }   /* 仅右边框 */
+
+.centered-table.large-text {
+  font-size: 40px;
+}
+    </style>
+</head>
+
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+    <div class="navbar-menu">
+        <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    More Research
+                </a>
+                <div class="navbar-dropdown">
+                    <a class="navbar-item" href="https://jdh-algo.github.io/JoyHallo/">
+                      JoyHallo
+                    </a>
+                    <a class="navbar-item" href="https://jdh-algo.github.io/JoyVASA/">
+                      JoyVASA
+                    </a>
+                    <a class="navbar-item" href="https://jdh-algo.github.io/JoyType/">
+                      JoyType
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+  </nav>
+
+  <div id="root" class="column-flex">
+    <div id="title-flex" class="column-flex">
+      <h1> Citrus-V: Advancing Medical Foundation Models with Unified Medical Image Grounding for Clinical Reasoning </h1>
+      <span>
+        Guoxin&nbsp;Wang<sup>1†</sup>,
+        Jun&nbsp;Zhao<sup>1</sup>,
+        Xinyi&nbsp;Liu<sup>1</sup>,
+        Enyou&nbsp;Liu<sup>1</sup>,
+        Xuyang&nbsp;Cao<sup>1</sup>,
+        Chao&nbsp;Li<sup>1</sup>,
+        Zhuoyun&nbsp;Liu<sup>1</sup>,
+        Qintian&nbsp;Sun<sup>1</sup>,
+        Fangru&nbsp;Zhou<sup>1</sup>,
+        Haoqiang&nbsp;Xing<sup>1</sup>,
+        Zhenhong&nbsp;Yang<sup>1</sup>
+        <br />
+      </span>
+      <span><sup>1</sup>JDH Algo, JD Health International Inc.</span>
+      <span><sup>†</sup>Project Leader</span>
+      <div class="flex flex-gap" style="margin-bottom:0.5em;">
+        <!-- arxiv Link -->
+        <span class="link-block">
+          <a href="" target="_blank"
+             class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+                <i class="ai ai-arxiv"></i>
+            </span>
+            <span>arXiv</span>
+          </a>
+        </span>
+
+        <!-- Github link -->
+        <span class="link-block">
+          <a href="https://github.com/jdh-algo/Citrus-V" target="_blank"
+            class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+              <i class="fab fa-github"></i>
+            </span>
+            <span>Code</span>
+          </a>
+        </span>
+
+        <!-- huggingface model Link -->
+        <span class="link-block">
+          <a href="https://huggingface.co/jdh-algo/Citrus-V-8B-v1.0" target="_blank"
+            class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+              <img src="./static/logo/hf-logo.png">
+            </span>
+            <span>Citrus-V 8B</span>
+          </a>
+        </span>
+        <!-- huggingface model Link -->
+        <span class="link-block">
+          <a href="https://huggingface.co/jdh-algo/Citrus-V-33B-v1.0" target="_blank"
+            class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+              <img src="./static/logo/hf-logo.png">
+            </span>
+            <span>Citrus-V 33B</span>
+          </a>
+        </span>
+        <!-- huggingface model Link -->
+        <span class="link-block">
+          <a href="https://huggingface.co/jdh-algo/Citrus-V-73B-v1.0" target="_blank"
+            class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+              <img src="./static/logo/hf-logo.png">
+            </span>
+            <span>Citrus-V 73B</span>
+          </a>
+        </span>
+        <!-- huggingface demo Link -->
+        <span class="link-block">
+          <a href="https://huggingface.co/datasets/jdh-algo/MeCoVQA-G-Plus" target="_blank"
+            class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+              <img src="./static/logo/hf-logo.png">
+            </span>
+            <span>MeCoVQA-G-Plus</span>
+          </a>
+        </span>
+        <!-- huggingface demo Link -->
+        <span class="link-block">
+          <a href="https://huggingface.co/datasets/jdh-algo/MedXray-CoT" target="_blank"
+            class="external-link button is-normal is-rounded is-dark">
+            <span class="icon">
+              <img src="./static/logo/hf-logo.png">
+            </span>
+            <span>MedXray-CoT</span>
+          </a>
+        </span>
+      </div>
+      <div class="responsive-image-container" style="position: relative; overflow: visible; text-align: center;">
+        <img src="source/images/Citrus-V-Architecture.png"
+             style="position: relative; left: 50%; transform: translateX(-50%); width: 1200px; max-width: 90vw;">
+        <div style="position: relative; left: 50%; transform: translateX(-50%); width: 1200px; max-width: 90vw; text-align: left; margin-top: 10px;">
+          <p>
+            <b>Framework. </b>Model architecture of Citrus-V. The framework consists of three components: (1) an MLLM—including the LLM, tokenizer, and a vision encoder—for high-level visual-textual reasoning such as report generation, VQA, and grounding; (2) a segmentation projector that maps the "[SEG]" token produced by the MLLM into latent segmentation prompts; and (3) a segmentation model that decodes the latent segmentation prompts together with semantic image features into pixel-level masks. Separate image encoders are employed to decouple low-level details for segmentation from high-level semantics for other tasks, ensuring both types of tasks are optimized without semantic conflict.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="sections" class="column-flex">
+      <!-- <p style="color:#700000"><i>(Note: all portrait images on this page are virtual, non-existing identities generated by StyleGAN2 or DALL·E-3 (except for Mona Lisa). We are exploring visual affective skill generation for virtual, interactive characters, NOT impersonating any person in the real world. This is only a research demonstration and there's no product or API release plan. See also the bottom of this page for more of our Responsible AI considerations.) </i></p> -->
+      <h3>Abstract</h3>
+        <p>
+          Medical imaging provides critical evidence for clinical diagnosis, treatment planning, and surgical decisions, 
+          yet most existing imaging models are narrowly focused and require multiple specialized networks, limiting their 
+          generalization. Although large-scale language and multimodal models exhibit strong reasoning and multi-task 
+          capabilities, real-world clinical applications demand precise visual grounding, multimodal integration, and 
+          chain-of-thought reasoning. We introduce Citrus-V, a multimodal medical foundation model that combines image 
+          analysis with textual reasoning. The model integrates detection, segmentation, and multimodal chain-of-thought 
+          reasoning, enabling pixel-level lesion localization, structured report generation, and physician-like diagnostic 
+          inference in a single framework. We propose a novel multimodal training approach and release a curated 
+          open-source data suite covering reasoning, detection, segmentation, and document understanding tasks. 
+          Evaluations demonstrate that Citrus-V outperforms existing open-source medical models and expert-level imaging 
+          systems across multiple benchmarks, delivering a unified pipeline from visual grounding to clinical reasoning 
+          and supporting precise lesion quantification, automated reporting, and reliable second opinions.
+        </p>
+
+      <h3>Contribution</h3>
+      <p>
+        1. We construct a unified model that integrates detection, segmentation, 
+        and multimodal chain-of-thought reasoning, enabling pixel-level lesion 
+        localization, structured report generation, and physician-like diagnostic 
+        inference within a single model.
+      </p>
+      <br style="display: block; margin-top: 10px;">
+      <p>
+        2. To facilitate reproducibility and support the research community, we 
+        release Citrus-V along with a curated open-source data suite, including a 
+        multimodal chain-of-thought reasoning dataset for report generation, a 
+        refined detection and segmentation benchmark with corrected labels, and a 
+        medical document understanding benchmark with graded difficulty levels.
+      </p>
+      <br style="display: block; margin-top: 10px;">
+      <p>
+        3. We further design a novel multimodal training paradigm to accelerate 
+        convergence and enhance generalization across diverse imaging and reasoning 
+        tasks.
+      </p>
+
+      <h3>Comparison with Other Methods</h3>
+      <div style="text-align: center;">
+      <table class="centered-table" style="border-collapse: collapse; table-layout: fixed;">
+        <tr>
+            <th rowspan="2" style="background: #f0f0f0;"><p>Ability</p></th>
+            <th colspan="2" style="background: #f0f0f0;"><p>Evaluation</p></th>
+            <th colspan="5" style="background: #f0f0f0;"><p>Open-source model &lt; 10B</p></th>
+            <th colspan="9" style="background: #f0f0f0;"><p>Open-source model &gt; 10B</p></th>
+            <th colspan="3" style="background: #f0f0f0;"><p>Commercial model</p></th>
+        </tr>
+        <tr>
+            <th style="background: #f0f0f0;">Task</th>
+            <th style="background: #f0f0f0;">Sub-Category</th>
+            <th style="background: #f0f0f0;">MedGemma 4B</th>
+            <th style="background: #f0f0f0;">Qwen2.5-VL 7B</th>
+            <th style="background: #f0f0f0;">HuatuoGPT-V 7B</th>
+            <th style="background: #f0f0f0;">Lingshu 7B</th>
+            <th style="background: #f0f0f0;">Citrus-V 8B</th>
+            <th style="background: #f0f0f0;">HealthGPT 14B</th>
+            <th style="background: #f0f0f0;">MedPLIB 14B</th>
+            <th style="background: #f0f0f0;">Qwen2.5-VL 32B</th>
+            <th style="background: #f0f0f0;">Lingshu 32B</th>
+            <th style="background: #f0f0f0;">Citrus-V 33B</th>
+            <th style="background: #f0f0f0;">HuatuoGPT-V 34B</th>
+            <th style="background: #f0f0f0;">MedGemma 27B</th>
+            <th style="background: #f0f0f0;">Qwen2.5-VL 72B</th>
+            <th style="background: #f0f0f0;">Citrus-V 73B</th>
+            <th style="background: #f0f0f0;">Doubao 1.6</th>
+            <th style="background: #f0f0f0;">GPT 4.1</th>
+            <th style="background: #f0f0f0;">GPT 5</th>
+        </tr>
+        <tr>
+            <td rowspan="5">Medical visual question answering (Med-VQA)</td>
+            <td>VQA-RAD</td>
+            <td>-</td>
+            <td>72.06</td>
+            <td>66.30</td>
+            <td>67.85</td>
+            <td>68.74</td>
+            <td>64.70</td>
+            <td>64.08</td>
+            <td>45.45</td>
+            <td>72.28</td>
+            <td>75.39</td>
+            <td></td>
+            <td>63.64</td>
+            <td>63.86</td>
+            <td>79.16</td>
+            <td></td>
+            <td>33.49</td>
+            <td>62.53</td>
+            <td>68.37</td>
+        </tr>
+        <tr>
+            <td>MedXpertQA</td>
+            <td>MM</td>
+            <td>22.05</td>
+            <td>20.75</td>
+            <td>22.30</td>
+            <td>26.90</td>
+            <td>25.01</td>
+            <td>24.55</td>
+            <td>-</td>
+            <td>25.30</td>
+            <td>31.00</td>
+            <td></td>
+            <td>22.65</td>
+            <td>33.10</td>
+            <td>28.15</td>
+            <td></td>
+            <td>45.75</td>
+            <td>43.35</td>
+            <td>51.48</td>
+        </tr>
+        <tr>
+            <td>SLAKE</td>
+            <td>-</td>
+            <td>78.32</td>
+            <td>67.86</td>
+            <td>69.39</td>
+            <td>82.90</td>
+            <td>84.81</td>
+            <td>67.43</td>
+            <td>38.54</td>
+            <td>76.36</td>
+            <td>87.68</td>
+            <td></td>
+            <td>73.02</td>
+            <td>76.17</td>
+            <td>79.47</td>
+            <td></td>
+            <td>67.28</td>
+            <td>72.54</td>
+            <td>65.82</td>
+        </tr>
+        <tr>
+            <td>PATH-VQA</td>
+            <td>-</td>
+            <td>48.64</td>
+            <td>42.30</td>
+            <td>44.29</td>
+            <td>60.23</td>
+            <td>61.78</td>
+            <td>58.67</td>
+            <td>40.02</td>
+            <td>41.58</td>
+            <td>64.76</td>
+            <td></td>
+            <td>44.92</td>
+            <td>47.60</td>
+            <td>42.55</td>
+            <td></td>
+            <td>47.58</td>
+            <td>54.97</td>
+            <td>31.74</td>
+        </tr>
+        <tr>
+            <td>PMC-VQA</td>
+            <td>-</td>
+            <td>48.02</td>
+            <td>50.86</td>
+            <td>53.84</td>
+            <td>55.77</td>
+            <td>55.64</td>
+            <td>56.90</td>
+            <td>44.40</td>
+            <td>53.58</td>
+            <td>57.23</td>
+            <td></td>
+            <td>56.79</td>
+            <td></td>
+            <td>57.11</td>
+            <td></td>
+            <td>49.94</td>
+            <td>38.76</td>
+            <td>36.10</td>
+        </tr>
+        <tr>
+            <td rowspan="9">Medical text question answering (Med-TQA)</td>
+            <td>PubMedQA</td>
+            <td>-</td>
+            <td>73.00</td>
+            <td>75.80</td>
+            <td>73.60</td>
+            <td>75.40</td>
+            <td>74.80</td>
+            <td>69.40</td>
+            <td>49.40</td>
+            <td>68.60</td>
+            <td>78.20</td>
+            <td></td>
+            <td>71.00</td>
+            <td>79.00</td>
+            <td>70.00</td>
+            <td></td>
+            <td>76.00</td>
+            <td>76.00</td>
+            <td>78.00</td>
+        </tr>
+        <tr>
+            <td>MedMCQA</td>
+            <td>-</td>
+            <td>52.26</td>
+            <td>53.40</td>
+            <td>51.95</td>
+            <td>56.13</td>
+            <td>55.10</td>
+            <td>63.33</td>
+            <td>1.63</td>
+            <td>62.71</td>
+            <td>65.05</td>
+            <td></td>
+            <td>55.08</td>
+            <td>63.23</td>
+            <td>69.57</td>
+            <td></td>
+            <td>75.06</td>
+            <td>77.07</td>
+            <td>62.99</td>
+        </tr>
+        <tr>
+            <td rowspan="2">MedQA</td>
+            <td>USMLE</td>
+            <td>55.54</td>
+            <td>57.50</td>
+            <td>52.95</td>
+            <td>63.39</td>
+            <td>64.80</td>
+            <td>66.93</td>
+            <td>7.38</td>
+            <td>71.33</td>
+            <td>74.94</td>
+            <td></td>
+            <td>58.52</td>
+            <td>81.15</td>
+            <td>77.77</td>
+            <td></td>
+            <td>93.48</td>
+            <td>87.98</td>
+            <td>76.96</td>
+        </tr>
+        <tr>
+            <td>MCMLE</td>
+            <td>41.10</td>
+            <td>73.93</td>
+            <td>73.09</td>
+            <td>75.98</td>
+            <td>76.90</td>
+            <td>52.83</td>
+            <td>12.03</td>
+            <td>88.18</td>
+            <td>86.98</td>
+            <td></td>
+            <td>76.09</td>
+            <td>64.89</td>
+            <td>90.40</td>
+            <td></td>
+            <td>94.02</td>
+            <td>81.73</td>
+            <td>74.00</td>
+        </tr>
+        <tr>
+            <td>MedXpertQA</td>
+            <td>Text</td>
+            <td>13.10</td>
+            <td>12.40</td>
+            <td>10.33</td>
+            <td>16.45</td>
+            <td>16.90</td>
+            <td>12.45</td>
+            <td>0.45</td>
+            <td>15.88</td>
+            <td>22.86</td>
+            <td></td>
+            <td>12.20</td>
+            <td>22.01</td>
+            <td>16.78</td>
+            <td></td>
+            <td>30.67</td>
+            <td>30.82</td>
+            <td>40.75</td>
+        </tr>
+        <tr>
+            <td>CMMLU</td>
+            <td>-</td>
+            <td>43.96</td>
+            <td>68.80</td>
+            <td>71.12</td>
+            <td>69.02</td>
+            <td>71.20</td>
+            <td>55.36</td>
+            <td>15.53</td>
+            <td>82.60</td>
+            <td>82.37</td>
+            <td></td>
+            <td>77.64</td>
+            <td>60.24</td>
+            <td>87.47</td>
+            <td></td>
+            <td>91.67</td>
+            <td>81.02</td>
+            <td>82.93</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Medbullets</td>
+            <td>op4</td>
+            <td>48.05</td>
+            <td>47.08</td>
+            <td>43.51</td>
+            <td>62.66</td>
+            <td>59.09</td>
+            <td>53.57</td>
+            <td>3.90</td>
+            <td>59.74</td>
+            <td>68.51</td>
+            <td></td>
+            <td>44.81</td>
+            <td>67.86</td>
+            <td>62.66</td>
+            <td></td>
+            <td>82.79</td>
+            <td>78.90</td>
+            <td>88.93</td>
+        </tr>
+        <tr>
+            <td>op5</td>
+            <td>42.53</td>
+            <td>36.69</td>
+            <td>37.66</td>
+            <td>52.92</td>
+            <td>54.22</td>
+            <td>50.00</td>
+            <td>1.30</td>
+            <td>50.65</td>
+            <td>63.31</td>
+            <td></td>
+            <td>39.29</td>
+            <td>65.58</td>
+            <td>56.17</td>
+            <td></td>
+            <td>76.62</td>
+            <td>73.38</td>
+            <td>87.30</td>
+        </tr>
+        <tr>
+            <td>SuperGPQA</td>
+            <td>-</td>
+            <td>21.52</td>
+            <td>26.39</td>
+            <td>22.11</td>
+            <td>27.51</td>
+            <td>29.47</td>
+            <td>25.59</td>
+            <td>0.22</td>
+            <td>38.26</td>
+            <td>40.80</td>
+            <td></td>
+            <td>28.06</td>
+            <td>33.18</td>
+            <td>45.15</td>
+            <td></td>
+            <td>55.19</td>
+            <td>50.60</td>
+            <td>49.54</td>
+        </tr>
+        <tr>
+            <td rowspan="9">Medical image detection and segmentation (Med-IDAS)</td>
+            <td rowspan="8">MeCOVQA-G (segmentation)</td>
+            <td>DER</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>90.89</td>
+            <td>-</td>
+            <td>79.84</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>CT</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>39.83</td>
+            <td>-</td>
+            <td>57.58</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>PET</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>75.93</td>
+            <td>-</td>
+            <td>64.25</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>X-RAY</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>8.82</td>
+            <td>-</td>
+            <td>8.47</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>END</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>90.73</td>
+            <td>-</td>
+            <td>44.35</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>MR</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>35.96</td>
+            <td>-</td>
+            <td>27.38</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>US</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>82.39</td>
+            <td>-</td>
+            <td>34.22</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>FP</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>88.00</td>
+            <td>-</td>
+            <td>4.82</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td></td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>MedSAM2 (eval)</td>
+            <td>-</td>
+            <td></td>
+            <td>20.90</td>
+            <td></td>
+            <td></td>
+            <td>31.90</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td rowspan="5">Medical Document Understanding (Med-Doc)</td>
+            <td rowspan="3">Laboratory test report</td>
+            <td>Full analysis (advanced)</td>
+            <td>27.61</td>
+            <td>73.23</td>
+            <td>23.10</td>
+            <td>60.06</td>
+            <td>91.21</td>
+            <td>22.22</td>
+            <td>-</td>
+            <td>71.40</td>
+            <td>63.46</td>
+            <td></td>
+            <td>22.78</td>
+            <td>26.15</td>
+            <td>74.90</td>
+            <td></td>
+            <td>80.00</td>
+            <td>66.86</td>
+            <td>69.05</td>
+        </tr>
+        <tr>
+            <td>Simple QA (advanced)</td>
+            <td>19.87</td>
+            <td>83.62</td>
+            <td>10.26</td>
+            <td>60.48</td>
+            <td>96.94</td>
+            <td>17.90</td>
+            <td>-</td>
+            <td>83.41</td>
+            <td>73.36</td>
+            <td></td>
+            <td>8.52</td>
+            <td>32.97</td>
+            <td>88.21</td>
+            <td></td>
+            <td>84.72</td>
+            <td>71.40</td>
+            <td>78.60</td>
+        </tr>
+        <tr>
+            <td>Complex QA (advanced)</td>
+            <td>9.56</td>
+            <td>31.22</td>
+            <td>4.56</td>
+            <td>23.45</td>
+            <td>84.46</td>
+            <td>3.17</td>
+            <td>-</td>
+            <td>30.54</td>
+            <td>32.38</td>
+            <td></td>
+            <td>10.88</td>
+            <td>5.50</td>
+            <td>44.11</td>
+            <td></td>
+            <td>70.90</td>
+            <td>36.66</td>
+            <td>56.78</td>
+        </tr>
+        <tr>
+            <td rowspan="2">All categories (except physical examination reports)</td>
+            <td>Simple QA (advanced)</td>
+            <td>29.75</td>
+            <td>71.92</td>
+            <td>25.17</td>
+            <td>53.92</td>
+            <td>79.12</td>
+            <td>24.67</td>
+            <td>-</td>
+            <td>73.29</td>
+            <td>61.25</td>
+            <td></td>
+            <td>22.50</td>
+            <td>29.50</td>
+            <td>74.46</td>
+            <td></td>
+            <td>81.00</td>
+            <td>53.17</td>
+            <td>82.92</td>
+        </tr>
+        <tr>
+            <td>Complex QA (advanced)</td>
+            <td>25.92</td>
+            <td>70.92</td>
+            <td>14.21</td>
+            <td>52.28</td>
+            <td>79.56</td>
+            <td>16.00</td>
+            <td>-</td>
+            <td>73.38</td>
+            <td>62.83</td>
+            <td></td>
+            <td>16.12</td>
+            <td>22.21</td>
+            <td>76.46</td>
+            <td></td>
+            <td>70.92</td>
+            <td>55.04</td>
+            <td>64.50</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Medical Image Report Generation (Med-IRG)</td>
+            <td rowspan="3">CheXpert Plus</td>
+            <td>ROUGE-L</td>
+            <td>26.01</td>
+            <td>22.59</td>
+            <td>21.40</td>
+            <td>26.68</td>
+            <td>28.94</td>
+            <td>21.29</td>
+            <td>0.07</td>
+            <td>17.45</td>
+            <td>25.29</td>
+            <td></td>
+            <td>23.97</td>
+            <td>17.65</td>
+            <td>20.06</td>
+            <td></td>
+            <td></td>
+            <td>24.50</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>CIDEr</td>
+            <td>85.86</td>
+            <td>61.72</td>
+            <td>65.00</td>
+            <td>76.49</td>
+            <td>94.57</td>
+            <td>68.24</td>
+            <td>0.04</td>
+            <td>52.48</td>
+            <td>77.42</td>
+            <td></td>
+            <td>66.07</td>
+            <td>48.08</td>
+            <td>57.31</td>
+            <td></td>
+            <td></td>
+            <td>78.80</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>RaTE</td>
+            <td>51.23</td>
+            <td>43.79</td>
+            <td>46.58</td>
+            <td>46.93</td>
+            <td>51.07</td>
+            <td>47.82</td>
+            <td>21.05</td>
+            <td>46.70</td>
+            <td>46.18</td>
+            <td></td>
+            <td>45.51</td>
+            <td>48.73</td>
+            <td>44.76</td>
+            <td></td>
+            <td></td>
+            <td>45.50</td>
+            <td></td>
+        </tr>
+    </table>
+      </div>
+
+      <h3>Model Access</h3>
+      <table class="centered-table" style="width: 100%;">
+        <thead>
+          <tr>
+            <th><p style="font-size: 18px;">Model</p></b></th>
+            <th><p style="font-size: 18px;">Size</p></b></th>
+            <th><p style="font-size: 18px;">Ability</p></th>
+            <th><p style="font-size: 18px;">Download</p></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="3"><p style="font-size: 18px;">Citrus-V</p></td>
+            <td><p style="font-size: 18px;">8B</p></td>
+            <td><p style="font-size: 18px;">Med-VQA, Med-TQA, Med-Doc, Med-IRG and Multimodal Chain-of-Thought Reasoning (MM-CoT).</p></td>
+            <td><p style="font-size: 18px;"><a target="_blank" href="https://huggingface.co/jdh-algo/Citrus-V-8B-v1.0">Huggingface</a></p></td>
+          </tr>
+          <tr>
+            <td><p style="font-size: 18px;">33B</p></td>
+            <td><p style="font-size: 18px;">Med-VQA, Med-TQA, Med-Doc, and MM-CoT.</p></td>
+            <td><p style="font-size: 18px;"><a target="_blank" href="https://huggingface.co/jdh-algo/Citrus-V-33B-v1.0">Huggingface</a></p></td>
+          </tr>
+          <tr>
+            <td><p style="font-size: 18px;">73B</p></td>
+            <td><p style="font-size: 18px;">Med-VQA, Med-TQA, Med-Doc, and MM-CoT.</p></td>
+            <td><p style="font-size: 18px;"><a target="_blank" href="https://huggingface.co/jdh-algo/Citrus-V-73B-v1.0">Huggingface</a></p></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Dataset Access</h3>
+        <table class="centered-table" style="width: 100%;">
+          <thead>
+            <tr>
+              <th><p style="font-size: 18px;">Dataset</p></b></th>
+              <th><p style="font-size: 18px;">Usage</p></th>
+              <th><p style="font-size: 18px;">Description</p></th>
+              <th><p style="font-size: 18px;">Download</p></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><p style="font-size: 18px;">MeCoVQA-G-Plus</p></td>
+              <td><p style="font-size: 18px;">Benchmark</p></td>
+              <td><p style="font-size: 18px; text-align: justify;">MeCOVQA-G+ is mainly used to evaluate the medical image modality segmentation capability of medical multimodal language models, and it is built on the basis of the open-source dataset MeCOVQA-G through methods such as expert modification and review.</p></td>
+              <td><p style="font-size: 18px;"><a target="_blank" href="https://huggingface.co/datasets/jdh-algo/MeCoVQA-G-Plus">Huggingface</a></p></td>
+            </tr>
+            <tr>
+              <td><p style="font-size: 18px;">MedXray-CoT</p></td>
+              <td><p style="font-size: 18px;">Train Data</p></td>
+              <td><p style="font-size: 18px; text-align: justify;">The MedXray-CoT dataset is primarily used to train large medical multimodal models to develop the ability, similar to that of physicians, to reason based on different anatomical structure regions under the X-ray modality.</p></td>
+              <td><p style="font-size: 18px;"><a target="_blank" href="https://huggingface.co/datasets/jdh-algo/MedXray-CoT">Huggingface</a></p></td>
+            </tr>
+          </tbody>
+        </table>
+  
+      <h3>Training Strategy</h3>
+      <br style="display: block; margin-top: 10px;">
+      <img src="source/images/fig_train_stages.png" style="display: block; margin: 0 auto; width: 100%; min-width: 900px; max-width: 1400px;">
+      <br style="display: block; margin-top: 10px;">
+      <p><b>Shallow Alignment: </b>In this stage, most model parameters are frozen, and only the MLLM projector together with the vision encoder are updated. Training primarily relies on image-caption pairs, which establish a stable mapping from visual features into the language space without disrupting the pretrained reasoning ability of the LLM. 
+        This step provides a lightweight but essential initialization for subsequent multimodal alignment.</p>
+      <br style="display: block; margin-top: 10px;">
+      <p><b>Deep Alignment: </b>All MLLM parameters, including the projector, vision encoder, and LLM, are trainable, while the segmentation projector, encoder, and decoder remain frozen. 
+        Training incorporates a broader range of tasks, reporting detailed and structured, interpreting of medical image are preserved to establish correlations between visual features, medical concept, radiological findings and imaging diagnostic. Additionally, scientific document comprehension data such as chart, diagram, are taken considering that explication and interpretation of scientific illustrations and graphs is necessary facing with clinical documentation, laboratory reports, diagnostic image annotations and radiographic markers. 
+        This stage strengthens the MLLM’s multimodal comprehension capacity, while freezing the segmentation modules prevents premature interference from segmentation supervision.</p>
+      <br style="display: block; margin-top: 10px;">
+      <p><b>Instruction Fine-Tuning: </b>In the instruction fine-tuning stage, the MLLM is trained on the most diverse instruction-following data, including report generation, text-only instructions, OCR, grounding, 
+        medical VQA, reasoning-based chain-of-thought tasks, and segmentation instructions. All MLLM parameters are updated, whereas segmentation modules remain frozen. It is worth noting that our empirical results 
+        show that directly combining segmentation loss with other tasks can damage VQA performance significantly. To this end, for segmentation samples, the supervision is restricted to textual outputs containing 
+        the special "[SEG]" token, without applying mask-level losses. This design allows the MLLM to acquire the discourse patterns needed for segmentation queries and encode segmentation intent into the hidden 
+        state of the "[SEG]" token. </p>
+      <br style="display: block; margin-top: 10px;">
+      <p><b>Segmentation Fine-tuning: </b>At this stage, all MLLM parameters are frozen, and optimization focuses exclusively on segmentation components, including the segmentation projector, the segmentation 
+        encoder, and the segmentation decoder. Unlike prior methods that freeze most of the segmentation backbone, the full SAM2 architecture, including the vision encoder, prompt encoder, and mask decoder, 
+        is fine-tuned to adapt effectively to medical imaging. With the MLLM frozen, training is computationally efficient, while full adaptation of SAM2 ensures precise and domain-specific pixel-level segmentation.</p>
+      
+      <!-- <img src="source/images/distribution.png" style="display: block; margin: 0 auto; width: 80%; min-width: 900px; max-width: 1400px;">
+      <p style="text-align: center;">
+        <b>Figure 1. </b>Modality distribution of medical image in 4 training stage.
+      </p> -->
+
+      <h3>Case Study</h3>
+      <div class="image-slider">
+        <img src="source/images/casestudy-01.png" class="active">
+        <img src="source/images/casestudy-02.png">
+        <img src="source/images/casestudy-03.png">
+        <img src="source/images/casestudy-04.png">
+        <img src="source/images/casestudy-05.png">
+        <img src="source/images/casestudy-06.png">
+        <img src="source/images/casestudy-07.png">
+        <img src="source/images/casestudy-08.png">
+        <img src="source/images/casestudy-09.png">
+        <img src="source/images/casestudy-10.png">
+        
+        <button class="slider-btn left"><</button>
+        <button class="slider-btn right">></button>
+      </div>
+      
+      <div class="slider-dots"></div>
+      
+      <script>
+      const slider = document.querySelector('.image-slider');
+      const slides = slider.querySelectorAll('img');
+      const leftBtn = slider.querySelector('.slider-btn.left');
+      const rightBtn = slider.querySelector('.slider-btn.right');
+      const dotsContainer = document.querySelector('.slider-dots');
+      let current = 0;
+      
+      // 创建圆点
+      slides.forEach((_, index) => {
+        const dot = document.createElement('span');
+        if(index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => showSlide(index));
+        dotsContainer.appendChild(dot);
+      });
+      
+      const dots = dotsContainer.querySelectorAll('span');
+      
+      function showSlide(index) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = index;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+      }
+      
+      // 左右按钮
+      leftBtn.addEventListener('click', () => showSlide((current - 1 + slides.length) % slides.length));
+      rightBtn.addEventListener('click', () => showSlide((current + 1) % slides.length));
+      
+      // 自动轮播
+      let autoPlay = setInterval(() => showSlide((current + 1) % slides.length), 3000);
+      
+      // 鼠标悬停暂停
+      slider.addEventListener('mouseenter', () => clearInterval(autoPlay));
+      slider.addEventListener('mouseleave', () => {
+        autoPlay = setInterval(() => showSlide((current + 1) % slides.length), 3000);
+      });
+      </script>
+      
+      <!-- <h3>BibTeX</h3>
+        <p>If you find our work helpful, please consider citing us:</p>
+        <br>
+        <pre><code>@misc{shi2024joyhallo,
+  title={JoyHallo: Digital human model for Mandarin}, 
+  author={Sheng Shi and Xuyang Cao and Jun Zhao and Guoxin Wang},
+  year={2024},
+  eprint={2409.13268},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2409.13268}, 
+}</code></pre> -->
+
+      <br/>
+      <br/>
+      <br/>
+    </div>
+  </div>
+  <script src="index.js"></script>
+  <script>
+    function comming_soon_click() {
+      alert('Comming soon!');
+    }
+    function TBD_click() {
+      alert('TBD');
+    }
+  </script>
+</body>
+
+
+
+</html>
