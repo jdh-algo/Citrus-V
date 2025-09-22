@@ -1,49 +1,45 @@
-# Citrus-V: Advancing Medical Foundation Models with Unified Medical Image Grounding for Clinical Reasoning
+<h1 align='center'>
+  Citrus-V: Advancing Medical Foundation Models with Unified Medical Image Grounding for Clinical Reasoning
+</h1>
 
 <div align='center'>
-    Guoxin Wang<sup>1&dagger;</sup>&emsp;
-    Jun Zhao<sup>1</sup>&emsp;
-    Xinyi Liu<sup>1</sup>&emsp;
-    Yanbo Liu<sup>1</sup>&emsp;
-    Xuyang Cao<sup>1</sup>&emsp;
-    Chao Li<sup>1</sup>&emsp;
-    Zhuoyun Liu<sup>1</sup>&emsp;
-    Qintian Sun<sup>1</sup>&emsp;
-    Fangru Zhou<sup>1</sup>&emsp;
-    Haoqiang Xing<sup>1</sup>&emsp;
-    Zhenhong Yang<sup>1</sup>&emsp;
+    Guoxin Wang<sup>&dagger;</sup>&emsp;
+    Jun Zhao&emsp;
+    Xinyi Liu&emsp;
+    Yanbo Liu&emsp;
+    Xuyang Cao&emsp;
+    Chao Li&emsp;
+    Zhuoyun Liu&emsp;
+    Qintian Sun&emsp;
+    Fangru Zhou&emsp;
+    Haoqiang Xing&emsp;
+    Zhenhong Yang&emsp;
 </div>
+
 <div align='center'>
-    <sup>1</sup>JDH Algo, JD Health International Inc.  
-<br>
+    JDH Algo, JD Health International Inc.  
+</div>
+
 <div align='center'>
     <sup>&dagger;</sup>Project Leader
-<br>
+</div>
 
 <div align='center'>
     <a href='https://github.com/jdh-algo/Citrus-V'><img src='https://img.shields.io/github/stars/jdh-algo/Citrus-V?style=social'></a>
     <a href='https://jdh-algo.github.io/Citrus-V/'><img src='https://img.shields.io/badge/Project-HomePage-Green'></a>
     <a href=''><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
-<a href='https://huggingface.co/jdh-algo/Citrus-V-8B-v1.0'>
-  <img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-Citrus--V%208B-yellow'>
-</a>
-<a href='https://huggingface.co/jdh-algo/Citrus-V-33B-v1.0'>
-  <img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-Citrus--V%2033B-yellow'>
-</a>
-<a href='https://huggingface.co/jdh-algo/Citrus-V-73B-v1.0'>
-  <img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-Citrus--V%2073B-yellow'>
-</a>
-<a href='https://huggingface.co/datasets/jdh-algo/MeCoVQA-G-Plus'>
-  <img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-MeCoVQA--G--Plus-yellow'>
-</a>
-<a href='https://huggingface.co/datasets/jdh-algo/MedXray-CoT'>
-  <img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-MedXray--CoT-yellow'>
-</a>
-
-    
+    <a href='https://huggingface.co/jdh-algo/Citrus-V-8B-v1.0'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-Citrus--V%208B-yellow'></a>
+    <a href='https://huggingface.co/jdh-algo/Citrus-V-33B-v1.0'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-Citrus--V%2033B-yellow'></a>
+    <a href='https://huggingface.co/jdh-algo/Citrus-V-73B-v1.0'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-Citrus--V%2073B-yellow'></a>
+    <a href='https://huggingface.co/datasets/jdh-algo/MeCoVQA-G-Plus'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-MeCoVQA--G--Plus-yellow'></a>
+    <a href='https://huggingface.co/datasets/jdh-algo/MedXray-CoT'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-MedXray--CoT-yellow'></a>
 </div>
+
 <br>
 
+
+## 📝 Introduction
+Medical imaging provides critical evidence for clinical diagnosis, treatment planning, and surgical decisions, yet most existing imaging models are narrowly focused and require multiple specialized networks, limiting their generalization. Although large-scale language and multimodal models exhibit strong reasoning and multi-task capabilities, real-world clinical applications demand precise visual grounding, multimodal integration, and chain-of-thought reasoning. We introduce Citrus-V, a multimodal medical foundation model that combines image analysis with textual reasoning. The model integrates detection, segmentation, and multimodal chain-of-thought reasoning, enabling pixel-level lesion localization, structured report generation, and physician-like diagnostic inference in a single framework. We propose a novel multimodal training approach and release a curated open-source data suite covering reasoning, detection, segmentation, and document understanding tasks.  Evaluations demonstrate that Citrus-V outperforms existing open-source medical models and expert-level imaging systems across multiple benchmarks, delivering a unified pipeline from visual grounding to clinical reasoning and supporting precise lesion quantification, automated reporting, and reliable second opinions.
 
 ## 🧳 Framework
 
@@ -61,7 +57,7 @@
     </em>
 </p>
 
-## 📖 Table of Contents
+<!-- ## 📖 Table of Contents
 - [Introduction](#-introduction)
 - [Key Features](#-key-features)
 - [Installation](#%EF%B8%8F-installation)
@@ -70,39 +66,8 @@
 - [Datasets](#-datasets)
 - [Evaluation](#-evaluation)
 - [License](#-license)
-- [Citation](#-citation)
+- [Citation](#-citation) -->
 
-## 📝 Introduction
-In clinical practice, physicians routinely operate in highly multimodal environments, where medical imaging plays a central role in diagnosis, treatment planning, and surgical decision-making. Accurate interpretation of imaging data is indispensable, as it provides critical evidence that complements textual reports, laboratory results, and patient history. Consequently, any artificial intelligence system intended for clinical deployment must be capable of integrating visual and textual information at a fine-grained, pixel-level resolution while supporting structured reasoning and clinically grounded decision-making.
-
-Existing medical imaging models are largely designed as expert systems specialized for narrow tasks such as lesion detection, segmentation, classification, or report generation. These models often require multiple specialized networks to cover different organs, disease types, or diagnostic tasks, and they rarely generalize effectively across diverse clinical scenarios. While large-scale language and multimodal models have demonstrated remarkable progress, including strong reasoning capabilities and multi-task generalization, applying them to real-world clinical settings remains challenging.
-
-Clinical tasks demand not only multimodal understanding but also precise visual grounding and integrated chain-of-thought reasoning to interpret complex medical data, support decision-making workflows, and provide reliable second opinions with explainability and clinical fidelity. Existing multimodal medical approaches often fail to provide pixel-level, fine-grained visual insights or to integrate heterogeneous data modalities effectively, which limits their utility in comprehensive diagnostic reasoning.
-
-Building upon our prior work, Citrus: Leveraging Expert Cognitive Pathways in a Medical Language Model for Advanced Medical Decision Support, which introduced a language-based medical foundation model incorporating expert-inspired reasoning pathways, we now present Citrus-V. This upgraded multimodal medical foundation model addresses the critical need for integrating medical images into clinical decision support systems.
-
-## ✨ Key Contributions
-Citrus-V makes the following key contributions to the field of medical AI:
-
-1. **Unified Integration of Visual and Reasoning Capabilities**: We construct a unified model that integrates detection, segmentation, and multimodal chain-of-thought reasoning, enabling pixel-level lesion localization, structured report generation, and physician-like diagnostic inference within a single model.
-
-2. **Comprehensive Open-Source Data Suite**: To facilitate reproducibility and support the research community, we release Citrus-V along with a curated open-source data suite, including:
-   - A multimodal chain-of-thought reasoning dataset for report generation
-   - A refined detection and segmentation benchmark with corrected labels
-   - A medical document understanding benchmark with graded difficulty levels
-
-3. **Novel Multimodal Training Paradigm**: We design a novel multimodal training paradigm to accelerate convergence and enhance generalization across diverse imaging and reasoning tasks.
-
-Extensive experiments demonstrate that Citrus-V surpasses existing open-source medical foundation models and expert-level imaging systems across multiple benchmarks, establishing new state-of-the-art performance in both visual and multimodal tasks. By providing a complete pipeline from visual grounding to clinical reasoning, Citrus-V offers critical support for precise lesion quantification, automated radiology reporting, and reliable second opinions, marking a significant step toward general-purpose medical foundation models and the broader adoption of AI in clinical practice.
-
-## 🔍 Key Features
-- **Unified Medical Image Grounding**: Advanced techniques for precise localization and understanding of medical images at the pixel level
-- **Comprehensive Clinical Reasoning**: Integration of medical knowledge graphs and clinical guidelines with multimodal chain-of-thought reasoning
-- **Multi-modal Medical Understanding**: Seamlessly process images, text, and structured data from electronic health records
-- **Medical Image Analysis**: Support for various medical imaging modalities (CT, MRI, X-ray, ultrasound, etc.) with detection and segmentation capabilities
-- **Medical OCR**: Specialized optical character recognition for medical documents and reports
-- **Fine-grained Control**: Adjustable parameters for different medical specialties and use cases
-- **Efficient Training Pipeline**: Optimized for medical datasets with packing and streaming capabilities
 
 ## 🛠️ Installation
 
