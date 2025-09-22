@@ -107,7 +107,7 @@ pre, code {
 
 .house-icon:hover {
   fill: #0366d6;
-}
+} 
 
     </style>
 </head>
@@ -157,20 +157,20 @@ pre, code {
     <div id="title-flex" class="column-flex">
       <h1> Citrus-V: Advancing Medical Foundation Models with Unified Medical Image Grounding for Clinical Reasoning </h1>
       <span>
-        Guoxin&nbsp;Wang<sup>1†</sup>,
-        Jun&nbsp;Zhao<sup>1</sup>,
-        Xinyi&nbsp;Liu<sup>1</sup>,
-        Enyou&nbsp;Liu<sup>1</sup>,
-        Xuyang&nbsp;Cao<sup>1</sup>,
-        Chao&nbsp;Li<sup>1</sup>,
-        Zhuoyun&nbsp;Liu<sup>1</sup>,
-        Qintian&nbsp;Sun<sup>1</sup>,
-        Fangru&nbsp;Zhou<sup>1</sup>,
-        Haoqiang&nbsp;Xing<sup>1</sup>,
-        Zhenhong&nbsp;Yang<sup>1</sup>
+        Guoxin&nbsp;Wang<sup>†</sup>,
+        Jun&nbsp;Zhao,
+        Xinyi&nbsp;Liu,
+        Yanbo&nbsp;Liu,
+        Xuyang&nbsp;Cao,
+        Chao&nbsp;Li,
+        Zhuoyun&nbsp;Liu,
+        Qintian&nbsp;Sun,
+        Fangru&nbsp;Zhou,
+        Haoqiang&nbsp;Xing,
+        Zhenhong&nbsp;Yang
         <br />
       </span>
-      <span><sup>1</sup>JDH Algo, JD Health International Inc.</span>
+      <span>JDH Algo, JD Health International Inc.</span>
       <span><sup>†</sup>Project Leader</span>
       <div class="flex flex-gap" style="margin-bottom:0.5em;">
         <!-- arxiv Link -->
@@ -277,22 +277,23 @@ pre, code {
 
       <h3>Contribution</h3>
       <p>
-        1. We construct a unified model that integrates detection, segmentation, 
+        1. <b>Unified Integration of Visual and Reasoning Capabilities</b>: We construct a unified model that integrates detection, segmentation, 
         and multimodal chain-of-thought reasoning, enabling pixel-level lesion 
         localization, structured report generation, and physician-like diagnostic 
         inference within a single model.
       </p>
       <br style="display: block; margin-top: 10px;">
       <p>
-        2. To facilitate reproducibility and support the research community, we 
-        release Citrus-V along with a curated open-source data suite, including a 
-        multimodal chain-of-thought reasoning dataset for report generation, a 
-        refined detection and segmentation benchmark with corrected labels, and a 
-        medical document understanding benchmark with graded difficulty levels.
+        2. <b>Comprehensive Open-Source Data Suite</b>: To facilitate reproducibility and support the research community, we release Citrus-V along with a curated open-source data suite, including:
       </p>
+      <ul style="list-style: disc; margin: 10px 0 0 -450px; padding-left: 20px; font-size: 20px; text-align: left;">
+        <li>A multimodal chain-of-thought reasoning dataset for report generation.</li>
+        <li>A refined detection and segmentation benchmark with corrected labels.</li>
+        <li>A medical document understanding benchmark with graded difficulty levels.</li>
+      </ul>
       <br style="display: block; margin-top: 10px;">
       <p>
-        3. We further design a novel multimodal training paradigm to accelerate 
+        3. <b>Novel Multimodal Training Paradigm</b>: We further design a novel multimodal training paradigm to accelerate 
         convergence and enhance generalization across diverse imaging and reasoning 
         tasks.
       </p>
