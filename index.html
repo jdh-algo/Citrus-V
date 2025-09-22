@@ -205,7 +205,7 @@ pre, code {
             <span>Citrus-V 8B</span>
           </a>
         </span>
-        <!-- huggingface model Link -->
+<!--         
         <span class="link-block">
           <a href="https://huggingface.co/jdh-algo/Citrus-V-33B-v1.0" target="_blank"
             class="external-link button is-normal is-rounded is-dark">
@@ -215,7 +215,6 @@ pre, code {
             <span>Citrus-V 33B</span>
           </a>
         </span>
-        <!-- huggingface model Link -->
         <span class="link-block">
           <a href="https://huggingface.co/jdh-algo/Citrus-V-73B-v1.0" target="_blank"
             class="external-link button is-normal is-rounded is-dark">
@@ -225,6 +224,7 @@ pre, code {
             <span>Citrus-V 73B</span>
           </a>
         </span>
+         -->
         <!-- huggingface demo Link -->
         <span class="link-block">
           <a href="https://huggingface.co/datasets/jdh-algo/MeCoVQA-G-Plus" target="_blank"
@@ -634,6 +634,232 @@ pre, code {
             <td>49.54</td>
         </tr>
         <tr>
+          <td rowspan="5">Medical Document Understanding (Med-Doc)</td>
+          <td rowspan="3">Laboratory test report (hard)</td>
+          <td>Full extract</td>
+          <td>27.61</td>
+          <td>73.23</td>
+          <td>23.10</td>
+          <td>60.06</td>
+          <td></td>
+          <td>22.22</td>
+          <td>-</td>
+          <td>71.40</td>
+          <td>63.46</td>
+          <td>90.01</td>
+          <td>22.78</td>
+          <td>26.15</td>
+          <td>74.90</td>
+          <td>92.34</td>
+          <td>80.00</td>
+          <td>66.86</td>
+          <td>69.05</td>
+        </tr>
+        <tr>
+            <td>Simple QA</td>
+            <td>19.87</td>
+            <td>83.62</td>
+            <td>10.26</td>
+            <td>60.48</td>
+            <td></td>
+            <td>17.90</td>
+            <td>-</td>
+            <td>83.41</td>
+            <td>73.36</td>
+            <td>96.29</td>
+            <td>8.52</td>
+            <td>32.97</td>
+            <td>88.21</td>
+            <td>96.07</td>
+            <td>84.72</td>
+            <td>71.40</td>
+            <td>78.60</td>
+        </tr>
+        <tr>
+            <td>Complex QA</td>
+            <td>9.56</td>
+            <td>31.22</td>
+            <td>4.56</td>
+            <td>23.45</td>
+            <td></td>
+            <td>3.17</td>
+            <td>-</td>
+            <td>30.54</td>
+            <td>32.38</td>
+            <td>87.99</td>
+            <td>10.88</td>
+            <td>5.50</td>
+            <td>44.11</td>
+            <td>87.91</td>
+            <td>70.90</td>
+            <td>36.66</td>
+            <td>56.78</td>
+        </tr>
+        <tr>
+            <td rowspan="2">All categories (hard)</td>
+            <td>Simple QA</td>
+            <td>29.75</td>
+            <td>71.92</td>
+            <td>25.17</td>
+            <td>53.92</td>
+            <td></td>
+            <td>24.67</td>
+            <td>-</td>
+            <td>73.29</td>
+            <td>61.25</td>
+            <td>83.08</td>
+            <td>22.50</td>
+            <td>29.50</td>
+            <td>74.46</td>
+            <td>81.04</td>
+            <td>81.00</td>
+            <td>53.17</td>
+            <td>82.92</td>
+        </tr>
+        <tr>
+            <td>Complex QA</td>
+            <td>25.92</td>
+            <td>70.92</td>
+            <td>14.21</td>
+            <td>52.28</td>
+            <td></td>
+            <td>16.00</td>
+            <td>-</td>
+            <td>73.38</td>
+            <td>62.83</td>
+            <td>82.54</td>
+            <td>16.12</td>
+            <td>22.21</td>
+            <td>76.46</td>
+            <td>86.58</td>
+            <td>70.92</td>
+            <td>55.04</td>
+            <td>64.50</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Medical Image Report Generation (Med-IRG)</td>
+            <td rowspan="3">CheXpert Plus</td>
+            <td>ROUGE-L</td>
+            <td>26.01</td>
+            <td>22.59</td>
+            <td>21.40</td>
+            <td>26.68</td>
+            <td></td>
+            <td>21.29</td>
+            <td>0.07</td>
+            <td>17.45</td>
+            <td>25.29</td>
+            <td>29.58</td>
+            <td>23.97</td>
+            <td>17.65</td>
+            <td>20.06</td>
+            <td>29.4</td>
+            <td>22.67</td>
+            <td>24.50</td>
+            <td>31.72</td>
+        </tr>
+        <tr>
+            <td>CIDEr</td>
+            <td>85.86</td>
+            <td>61.72</td>
+            <td>65.00</td>
+            <td>76.49</td>
+            <td></td>
+            <td>68.24</td>
+            <td>0.04</td>
+            <td>52.48</td>
+            <td>77.42</td>
+            <td>108.66</td>
+            <td>66.07</td>
+            <td>48.08</td>
+            <td>57.31</td>
+            <td>105.97</td>
+            <td>92.72</td>
+            <td>78.80</td>
+            <td>131.44</td>
+        </tr>
+        <tr>
+            <td>RaTE</td>
+            <td>51.23</td>
+            <td>43.79</td>
+            <td>46.58</td>
+            <td>46.93</td>
+            <td></td>
+            <td>47.82</td>
+            <td>21.05</td>
+            <td>46.70</td>
+            <td>46.18</td>
+            <td>52.45</td>
+            <td>45.51</td>
+            <td>48.73</td>
+            <td>44.76</td>
+            <td>52.01</td>
+            <td>53.76</td>
+            <td>45.50</td>
+            <td>56.64</td>
+        </tr>
+        <!-- <tr>
+          <td rowspan="3">IU Xray</td>
+          <td>ROUGE-L</td>
+          <td>39.51</td>
+          <td>30.41</td>
+          <td>29.96</td>
+          <td>44.52</td>
+          <td></td>
+          <td>23.89</td>
+          <td>-</td>
+          <td>20.86</td>
+          <td>45.06</td>
+          <td>45.66</td>
+          <td>29.12</td>
+          <td>32.59</td>
+          <td>26.44</td>
+          <td>45.16</td>
+          <td>22.67</td>
+          <td>32.63</td>
+          <td>31.72</td>
+        </tr>
+        <tr>
+          <td>CIDEr</td>
+          <td>151.86 </td>
+          <td>96.30 </td>
+          <td>110.51 </td>
+          <td>200.47 </td>
+          <td></td>
+          <td>86.89 </td>
+          <td>-</td>
+          <td>83.94 </td>
+          <td>206.68 </td>
+          <td>207.51</td>
+          <td>124.67 </td>
+          <td>115.65 </td>
+          <td>95.11 </td>
+          <td>223.98</td>
+          <td>92.72 </td>
+          <td>124.42 </td>
+          <td>131.44 </td>
+        </tr>
+        <tr>
+          <td>RaTE</td>
+          <td>61.99 </td>
+          <td>54.03 </td>
+          <td>54.91 </td>
+          <td>60.30 </td>
+          <td></td>
+          <td>52.33 </td>
+          <td>-</td>
+          <td>55.44 </td>
+          <td>65.22 </td>
+          <td>64.74</td>
+          <td>57.87 </td>
+          <td>58.76 </td>
+          <td>56.00 </td>
+          <td>65.37</td>
+          <td>53.76 </td>
+          <td>50.91 </td>
+          <td>56.64</td>
+        </tr> -->
+        <tr>
             <td rowspan="9">Medical image detection and segmentation (Med-IDAS)</td>
             <td rowspan="8">MeCOVQA-G (segmentation)</td>
             <td>DER</td>
@@ -816,232 +1042,7 @@ pre, code {
             <td>-</td>
             <td>-</td>
         </tr>
-        <tr>
-            <td rowspan="5">Medical Document Understanding (Med-Doc)</td>
-            <td rowspan="3">Laboratory test report</td>
-            <td>Full extract (hard)</td>
-            <td>27.61</td>
-            <td>73.23</td>
-            <td>23.10</td>
-            <td>60.06</td>
-            <td></td>
-            <td>22.22</td>
-            <td>-</td>
-            <td>71.40</td>
-            <td>63.46</td>
-            <td>90.01</td>
-            <td>22.78</td>
-            <td>26.15</td>
-            <td>74.90</td>
-            <td>92.34</td>
-            <td>80.00</td>
-            <td>66.86</td>
-            <td>69.05</td>
-        </tr>
-        <tr>
-            <td>Simple QA (hard)</td>
-            <td>19.87</td>
-            <td>83.62</td>
-            <td>10.26</td>
-            <td>60.48</td>
-            <td></td>
-            <td>17.90</td>
-            <td>-</td>
-            <td>83.41</td>
-            <td>73.36</td>
-            <td>96.29</td>
-            <td>8.52</td>
-            <td>32.97</td>
-            <td>88.21</td>
-            <td>96.07</td>
-            <td>84.72</td>
-            <td>71.40</td>
-            <td>78.60</td>
-        </tr>
-        <tr>
-            <td>Complex QA (hard)</td>
-            <td>9.56</td>
-            <td>31.22</td>
-            <td>4.56</td>
-            <td>23.45</td>
-            <td></td>
-            <td>3.17</td>
-            <td>-</td>
-            <td>30.54</td>
-            <td>32.38</td>
-            <td>87.99</td>
-            <td>10.88</td>
-            <td>5.50</td>
-            <td>44.11</td>
-            <td>87.91</td>
-            <td>70.90</td>
-            <td>36.66</td>
-            <td>56.78</td>
-        </tr>
-        <tr>
-            <td rowspan="2">All categories</td>
-            <td>Simple QA (hard)</td>
-            <td>29.75</td>
-            <td>71.92</td>
-            <td>25.17</td>
-            <td>53.92</td>
-            <td></td>
-            <td>24.67</td>
-            <td>-</td>
-            <td>73.29</td>
-            <td>61.25</td>
-            <td>83.08</td>
-            <td>22.50</td>
-            <td>29.50</td>
-            <td>74.46</td>
-            <td>81.04</td>
-            <td>81.00</td>
-            <td>53.17</td>
-            <td>82.92</td>
-        </tr>
-        <tr>
-            <td>Complex QA (hard)</td>
-            <td>25.92</td>
-            <td>70.92</td>
-            <td>14.21</td>
-            <td>52.28</td>
-            <td></td>
-            <td>16.00</td>
-            <td>-</td>
-            <td>73.38</td>
-            <td>62.83</td>
-            <td>82.54</td>
-            <td>16.12</td>
-            <td>22.21</td>
-            <td>76.46</td>
-            <td>86.58</td>
-            <td>70.92</td>
-            <td>55.04</td>
-            <td>64.50</td>
-        </tr>
-        <tr>
-            <td rowspan="6">Medical Image Report Generation (Med-IRG)</td>
-            <td rowspan="3">CheXpert Plus</td>
-            <td>ROUGE-L</td>
-            <td>26.01</td>
-            <td>22.59</td>
-            <td>21.40</td>
-            <td>26.68</td>
-            <td></td>
-            <td>21.29</td>
-            <td>0.07</td>
-            <td>17.45</td>
-            <td>25.29</td>
-            <td>29.58</td>
-            <td>23.97</td>
-            <td>17.65</td>
-            <td>20.06</td>
-            <td>29.4</td>
-            <td>22.67</td>
-            <td>24.50</td>
-            <td>31.72</td>
-        </tr>
-        <tr>
-            <td>CIDEr</td>
-            <td>85.86</td>
-            <td>61.72</td>
-            <td>65.00</td>
-            <td>76.49</td>
-            <td></td>
-            <td>68.24</td>
-            <td>0.04</td>
-            <td>52.48</td>
-            <td>77.42</td>
-            <td>108.66</td>
-            <td>66.07</td>
-            <td>48.08</td>
-            <td>57.31</td>
-            <td>105.97</td>
-            <td>92.72</td>
-            <td>78.80</td>
-            <td>131.44</td>
-        </tr>
-        <tr>
-            <td>RaTE</td>
-            <td>51.23</td>
-            <td>43.79</td>
-            <td>46.58</td>
-            <td>46.93</td>
-            <td></td>
-            <td>47.82</td>
-            <td>21.05</td>
-            <td>46.70</td>
-            <td>46.18</td>
-            <td>52.45</td>
-            <td>45.51</td>
-            <td>48.73</td>
-            <td>44.76</td>
-            <td>52.01</td>
-            <td>53.76</td>
-            <td>45.50</td>
-            <td>56.64</td>
-        </tr>
-        <tr>
-          <td rowspan="3">IU Xray</td>
-          <td>ROUGE-L</td>
-          <td>39.51</td>
-          <td>30.41</td>
-          <td>29.96</td>
-          <td>44.52</td>
-          <td></td>
-          <td>23.89</td>
-          <td>-</td>
-          <td>20.86</td>
-          <td>45.06</td>
-          <td>45.66</td>
-          <td>29.12</td>
-          <td>32.59</td>
-          <td>26.44</td>
-          <td>45.16</td>
-          <td>22.67</td>
-          <td>32.63</td>
-          <td>31.72</td>
-      </tr>
-      <tr>
-        <td>CIDEr</td>
-        <td>151.86 </td>
-        <td>96.30 </td>
-        <td>110.51 </td>
-        <td>200.47 </td>
-        <td></td>
-        <td>86.89 </td>
-        <td>-</td>
-        <td>83.94 </td>
-        <td>206.68 </td>
-        <td>207.51</td>
-        <td>124.67 </td>
-        <td>115.65 </td>
-        <td>95.11 </td>
-        <td>223.98</td>
-        <td>92.72 </td>
-        <td>124.42 </td>
-        <td>131.44 </td>
-    </tr>
-    <tr>
-      <td>RaTE</td>
-      <td>61.99 </td>
-      <td>54.03 </td>
-      <td>54.91 </td>
-      <td>60.30 </td>
-      <td></td>
-      <td>52.33 </td>
-      <td>-</td>
-      <td>55.44 </td>
-      <td>65.22 </td>
-      <td>64.74</td>
-      <td>57.87 </td>
-      <td>58.76 </td>
-      <td>56.00 </td>
-      <td>65.37</td>
-      <td>53.76 </td>
-      <td>50.91 </td>
-      <td>56.64</td>
-    </tr>
+        
     </table>
       </div>
 
