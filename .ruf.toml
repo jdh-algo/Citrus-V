@@ -1,0 +1,15 @@
+# 80 列，禁用 E501（行长度）即可放开 88 或 120
+line-length = 88
+target-version = "py38"
+select = [
+    "E",   # pycodestyle
+    "W",   # warning
+    "F",   # pyflakes
+    "I",   # isort
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+]
+ignore = ["E501"]   # 如想保留 79 列，删掉这一行
+
+[per-file-ignores]
+"__init__.py" = ["F401"]  # 允许 init 里 import 未使用
