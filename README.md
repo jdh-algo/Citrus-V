@@ -1,10 +1,64 @@
 # Citrus-V: Advancing Medical Foundation Models with Unified Medical Image Grounding for Clinical Reasoning
 
-<p align="center">
-    <br>
-    <img src="asset/Citrus-V-Architecture.png"/>
-    <em>Citrus-V Model Structure</em>
-    <br>
+<div align='center'>
+    Guoxin Wang<sup>1&dagger;</sup>&emsp;
+    Jun Zhao<sup>1</sup>&emsp;
+    Xinyi Liu<sup>1</sup>&emsp;
+    Yanbo Liu<sup>1</sup>&emsp;
+    Xuyang Cao<sup>1</sup>&emsp;
+    Chao Li<sup>1</sup>&emsp;
+    Zhuoyun Liu<sup>1</sup>&emsp;
+    Qintian Sun<sup>1</sup>&emsp;
+    Fangru Zhou<sup>1</sup>&emsp;
+    Haoqiang Xing<sup>1</sup>&emsp;
+    Zhenhong Yang<sup>1</sup>&emsp;
+</div>
+<div align='center'>
+    <sup>1</sup>JDH Algo, JD Health International Inc.  
+<br>
+<div align='center'>
+    <sup>&dagger;</sup>Project Leader
+<br>
+
+<div align='center'>
+    <a href='https://github.com/jdh-algo/Citrus-V'><img src='https://img.shields.io/github/stars/jdh-algo/Citrus-V?style=social'></a>
+    <a href='https://jdh-algo.github.io/Citrus-V/'><img src='https://img.shields.io/badge/Project-HomePage-Green'></a>
+    <a href=''><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
+<a href='https://huggingface.co/jdh-algo/Citrus-V-8B-v1.0'>
+  <img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-Citrus--V%208B-yellow'>
+</a>
+<a href='https://huggingface.co/jdh-algo/Citrus-V-33B-v1.0'>
+  <img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-Citrus--V%2033B-yellow'>
+</a>
+<a href='https://huggingface.co/jdh-algo/Citrus-V-73B-v1.0'>
+  <img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-Citrus--V%2073B-yellow'>
+</a>
+<a href='https://huggingface.co/datasets/jdh-algo/MeCoVQA-G-Plus'>
+  <img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-MeCoVQA--G--Plus-yellow'>
+</a>
+<a href='https://huggingface.co/datasets/jdh-algo/MedXray-CoT'>
+  <img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-MedXray--CoT-yellow'>
+</a>
+
+    
+</div>
+<br>
+
+
+## 🧳 Framework
+
+![Citrus-V-Architecture](asset/Citrus-V-Architecture.png)
+
+<p style="text-align:justify; text-justify:inter-word;">
+    <em>
+        Model architecture of Citrus-V. The framework consists of three components: 
+        (1) an MLLM—including the LLM, tokenizer, and a vision encoder—for high-level visual-textual reasoning 
+        such as report generation, VQA, and grounding; 
+        (2) a segmentation projector that maps the "[SEG]" token produced by the MLLM into latent segmentation prompts; 
+        and (3) a segmentation model that decodes the latent segmentation prompts together with semantic image features 
+        into pixel-level masks. Separate image encoders are employed to decouple low-level details for segmentation 
+        from high-level semantics for other tasks, ensuring both types of tasks are optimized without semantic conflict.
+    </em>
 </p>
 
 ## 📖 Table of Contents
@@ -75,6 +129,11 @@ To install Citrus-V:
     pip install -e .
     ```
 
+## 🚀 Quick Start
+### Training Section
+Here’s a quick example to get started with Citrus-V: this repo provides a pretrained checkpoint that has completed Stage 1 and Stage 2. The repo is designed for Stage 3 and Stage 4 training.
+The key difference is that Stage 3 performs full-network tuning and includes the HookGrad module. Stage 4 is the SAM-adaptation phase: every component is frozen except the SegProjector and SAM modules, which are jointly updated to align segmentation prompts with the Segment-Anything paradigm.
+
 <p align="center">
     <br>
     <img src="asset/fig_train_stages.png"/>
@@ -82,12 +141,6 @@ To install Citrus-V:
     <em>Four Training Stages of the Citrus-V</em>
     <br>
 </p>
-
-
-## 🚀 Quick Start
-### Training Section
-HHere’s a quick example to get started with Citrus-V: this repo provides a pretrained checkpoint that has completed Stage 1 and Stage 2. The repo is designed for Stage 3 and Stage 4 training.
-The key difference is that Stage 3 performs full-network tuning and includes the HookGrad module. Stage 4 is the SAM-adaptation phase: every component is frozen except the SegProjector and SAM modules, which are jointly updated to align segmentation prompts with the Segment-Anything paradigm.
 
 #### training stage 3
 ```shell
@@ -165,9 +218,6 @@ swift sft \
     --ddp_find_unused_parameters true
 ```
 
-### Testing Section
-
-
 ### Gradio Demo
 
 1. Deploy the model
@@ -201,7 +251,7 @@ If you use Citrus-V in your research, please cite our work:
 ```bibtex
 @article{citrusv2024,
   title={Citrus-V: Advancing Medical Foundation Models with Unified Medical Image Grounding for Clinical Reasoning},
-  author={Your Name and Contributors},
+  author={Guoxin Wang†, Jun Zhao, Xinyi Liu, Yanbo Liu, Xuyang Cao, Chao Li, Zhuoyun Liu, Qintian Sun, Fangru Zhou, Haoqiang Xing, Zhenhong Yang},
   journal={arXiv preprint arXiv:XXXX.XXXXX},
   year={2024}
 }
