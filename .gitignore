@@ -149,18 +149,18 @@ megatron_output/
 # ast template
 ast_index_file.py
 
-*.png
-*.json
-*.txt
-architectures/saved_models
-output/
-output_seg_zero/
-output_test/
-eval/results
-.gradio/
-/dato
-test/
-test_packing/
-eval/result*
-!/data/*.py
-!/data/*.sh
+# *.png
+# *.json
+# *.txt
+# architectures/saved_models
+# output/
+# output_seg_zero/
+# output_test/
+# eval/results
+# .gradio/
+# /dato
+# test/
+# test_packing/
+# eval/result*
+# !/data/*.py
+# !/data/*.sh
