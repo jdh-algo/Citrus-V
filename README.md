@@ -13,7 +13,7 @@
 </div>
 
 <div align='center'>
-    <sup>†</sup>Project Leader
+    <sup>†</sup>Project Lead
 </div>
 
 <div align='center'>
