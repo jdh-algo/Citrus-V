@@ -121,6 +121,7 @@ The key difference is that Stage 3 performs full-network tuning and includes the
 ```shell
 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
 NPROC_PER_NODE=8 \
+MIN_PIXELS=200704 \
 MAX_PIXELS=1003520 \
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
 swift sft \
@@ -164,6 +165,7 @@ swift sft \
 ```shell
 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
 NPROC_PER_NODE=8 \
+MIN_PIXELS=200704 \
 MAX_PIXELS=1003520 \
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
 swift sft \
