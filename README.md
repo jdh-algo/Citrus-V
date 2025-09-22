@@ -38,6 +38,7 @@
 <br>
 
 
+
 ## 📝 Introduction
 Medical imaging provides critical evidence for clinical diagnosis, treatment planning, and surgical decisions, yet most existing imaging models are narrowly focused and require multiple specialized networks, limiting their generalization. Although large-scale language and multimodal models exhibit strong reasoning and multi-task capabilities, real-world clinical applications demand precise visual grounding, multimodal integration, and chain-of-thought reasoning. We introduce Citrus-V, a multimodal medical foundation model that combines image analysis with textual reasoning. The model integrates detection, segmentation, and multimodal chain-of-thought reasoning, enabling pixel-level lesion localization, structured report generation, and physician-like diagnostic inference in a single framework. We propose a novel multimodal training approach and release a curated open-source data suite covering reasoning, detection, segmentation, and document understanding tasks.  Evaluations demonstrate that Citrus-V outperforms existing open-source medical models and expert-level imaging systems across multiple benchmarks, delivering a unified pipeline from visual grounding to clinical reasoning and supporting precise lesion quantification, automated reporting, and reliable second opinions.
 
@@ -57,16 +58,11 @@ Medical imaging provides critical evidence for clinical diagnosis, treatment pla
     </em>
 </p>
 
-<!-- ## 📖 Table of Contents
-- [Introduction](#-introduction)
-- [Key Features](#-key-features)
-- [Installation](#%EF%B8%8F-installation)
-- [Quick Start](#-quick-start)
-- [Usage](#-usage)
-- [Datasets](#-datasets)
-- [Evaluation](#-evaluation)
-- [License](#-license)
-- [Citation](#-citation) -->
+## 🚧 Opensource progress
+
+- [ ] Release Gradio Demo
+- [ ] Release 33B Model
+- [ ] Release 73B Model
 
 
 ## 🛠️ Installation
@@ -183,9 +179,10 @@ swift sft \
     --ddp_find_unused_parameters true
 ```
 
-### Gradio Demo
+### Deploy & Inference 
 
-1. Deploy the model
+1. Deploy
+
 ```bash
 CUDA_VISIBLE_DEVICES=0,1,2,3 \
 MAX_PIXELS=65535 \
@@ -199,12 +196,13 @@ swift deploy \
     --port 8000
 ```
 
-1. Start the gradio app
+2. Inference
 
 ```bash 
 cd projects
-python app.py
+python inference_with_deploy.py
 ```
+
 
 
 ## 🏛 License
