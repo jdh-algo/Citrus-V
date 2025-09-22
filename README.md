@@ -3,7 +3,7 @@
 </h1>
 
 <div align='center'>
-    Guoxin Wang<sup>&dagger;</sup>&emsp; Jun Zhao&emsp; Xinyi Liu&emsp; Yanbo Liu&emsp;
+    Guoxin Wang<sup>†</sup>&emsp; Jun Zhao&emsp; Xinyi Liu&emsp; Yanbo Liu&emsp;
     Xuyang Cao&emsp; Chao Li&emsp; Zhuoyun Liu&emsp; Qintian Sun&emsp; <br>
     Fangru Zhou&emsp; Haoqiang Xing&emsp; Zhenhong Yang
 </div>
@@ -13,7 +13,7 @@
 </div>
 
 <div align='center'>
-    <sup>&dagger;</sup>Project Leader
+    <sup>†</sup>Project Leader
 </div>
 
 <div align='center'>
@@ -51,7 +51,7 @@ Medical imaging provides critical evidence for clinical diagnosis, treatment pla
     </em>
 </p>
 
-## 🚧 Opensource progress
+## 🚧 Opensource Progress
 
 - [ ] Release Gradio Demo
 - [ ] Release 33B Model
@@ -83,7 +83,25 @@ To install Citrus-V:
     pip install -e .
     ```
 
-## 🚀 Quick Start
+
+## 🎒 Prepare Model Checkpoints
+
+Make sure you have [git-lfs](https://git-lfs.com/) installed and download all the following checkpoints to `projects/pretrained_weights`. 
+
+Download Citrus-V checkpoints:
+
+```bash
+git lfs install
+git clone https://huggingface.co/jdh-algo/Citrus-V-8B-v1.0
+```
+
+## 📚 Prepare Your Custom Data
+
+We recommend using the [official ms-swift documentation](https://swift.readthedocs.io/zh-cn/v3.8/Customization/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%95%B0%E6%8D%AE%E9%9B%86.html) to prepare your custom training dataset.
+
+
+## 🚀 Training
+
 ### Training Section
 Here’s a quick example to get started with Citrus-V: this repo provides a pretrained checkpoint that has completed Stage 1 and Stage 2. The repo is designed for Stage 3 and Stage 4 training.
 The key difference is that Stage 3 performs full-network tuning and includes the HookGrad module. Stage 4 is the SAM-adaptation phase: every component is frozen except the SegProjector and SAM modules, which are jointly updated to align segmentation prompts with the Segment-Anything paradigm.
@@ -136,7 +154,7 @@ swift sft \
 
 #### training stage 4
 ```shell
-YTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
+PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
 NPROC_PER_NODE=8 \
 MAX_PIXELS=1003520 \
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
@@ -163,6 +181,7 @@ swift sft \
     --freeze_vit true \
     --freeze_aligner true \
     --freeze_llm true \
+    --freeze_custom_parameters_json {/path/to/projects/vlm_7B_params.json} \
     --save_strategy epoch \
     --save_total_limit 8 \
     --logging_steps 5 \
@@ -189,13 +208,12 @@ swift deploy \
     --port 8000
 ```
 
-2. Inference
+2. Inference with Deployment
 
 ```bash 
 cd projects
 python inference_with_deploy.py
 ```
-
 
 
 ## 🏛 License
