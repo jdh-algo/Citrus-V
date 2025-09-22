@@ -215,4 +215,4 @@ If you use Citrus-V in your research, please cite our work:
 
 ## 🤝 Acknowledgments
 
-We would like to thank the contributors to the [ms-swift](https://github.com/modelscope/ms-swift) and [SA2VA](https://github.com/magic-research/Sa2VA), [SAM2](https://github.com/facebookresearch/sam2), [Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL), and [mmdetection](https://github.com/open-mmlab/mmdetection) repositories, for their open research and extraordinary work.
+We would like to thank the contributors to the [ms-swift](https://github.com/modelscope/ms-swift), [SA2VA](https://github.com/magic-research/Sa2VA), [SAM2](https://github.com/facebookresearch/sam2), [Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL), and [mmdetection](https://github.com/open-mmlab/mmdetection) repositories, for their open research and extraordinary work.
