@@ -115,9 +115,13 @@ The key difference is that Stage 3 performs full-network tuning and includes the
 </p>
 
 #### training stage 3
+<details>
+<summary>View Complete Training Command</summary>
+
 ```shell
 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
 NPROC_PER_NODE=8 \
+MIN_PIXELS=200704 \
 MAX_PIXELS=1003520 \
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
 swift sft \
@@ -152,10 +156,16 @@ swift sft \
     --ddp_find_unused_parameters true
 ```
 
+</details>
+
 #### training stage 4
+<details>
+<summary>View Complete Training Command</summary>
+
 ```shell
 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
 NPROC_PER_NODE=8 \
+MIN_PIXELS=200704 \
 MAX_PIXELS=1003520 \
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 \
 swift sft \
@@ -190,6 +200,8 @@ swift sft \
     --gradient_checkpointing true \
     --ddp_find_unused_parameters true
 ```
+
+</details>
 
 ### Deploy & Inference 
 
