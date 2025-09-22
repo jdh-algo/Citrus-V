@@ -55,18 +55,25 @@ Extensive experiments demonstrate that Citrus-V surpasses existing open-source m
 
 To install Citrus-V:
 
-```shell
-# 1. Create base environment
-conda create -n citrus_v python=3.10 -y
+1. Create base environment.
+    ```shell
+    conda create -n citrus_v python=3.10 -y
+    conda activate citrus_v
+    ```
 
-# 2. Install requirements
-git clone https://github.com/jdh-algo/Citrus-V.git
-cd Citrus-V
-pip install -r requirements.txt
+2. Install requirements.
+    ```bash
+    git clone https://github.com/jdh-algo/Citrus-V.git
+    cd Citrus-V
+    pip install -r requirements_citrus.txt
+    ```
 
-# 3. Install Citrus-V training environment
-pip install -e .
-```
+3. Install [flash-attention](https://github.com/Dao-AILab/flash-attention) according to your environment. Here we used `flash-attn==2.7.3`.
+
+4. Install Citrus-V training environment. (Based on [ms-swift](https://github.com/modelscope/ms-swift)).
+    ```shell
+    pip install -e .
+    ```
 
 <p align="center">
     <br>
@@ -163,6 +170,26 @@ swift sft \
 
 ### Gradio Demo
 
+1. Deploy the model
+```bash
+CUDA_VISIBLE_DEVICES=0,1,2,3 \
+MAX_PIXELS=65535 \
+VIDEO_MAX_PIXELS=50176 \
+FPS_MAX_FRAMES=12 \
+swift deploy \
+    --model /path/to/model \
+    --served_model_name CitrusV_8B \
+    --infer_backend pt \
+    --torch_dtype bfloat16 \
+    --port 8000
+```
+
+1. Start the gradio app
+
+```bash 
+cd projects
+python app.py
+```
 
 
 ## 🏛 License
