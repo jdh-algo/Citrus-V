@@ -3,17 +3,9 @@
 </h1>
 
 <div align='center'>
-    Guoxin Wang<sup>&dagger;</sup>&emsp;
-    Jun Zhao&emsp;
-    Xinyi Liu&emsp;
-    Yanbo Liu&emsp;
-    Xuyang Cao&emsp;
-    Chao Li&emsp;
-    Zhuoyun Liu&emsp;
-    Qintian Sun&emsp;
-    Fangru Zhou&emsp;
-    Haoqiang Xing&emsp;
-    Zhenhong Yang&emsp;
+    Guoxin Wang<sup>&dagger;</sup>&emsp; Jun Zhao&emsp; Xinyi Liu&emsp; Yanbo Liu&emsp;
+    Xuyang Cao&emsp; Chao Li&emsp; Zhuoyun Liu&emsp; Qintian Sun&emsp; <br>
+    Fangru Zhou&emsp; Haoqiang Xing&emsp; Zhenhong Yang
 </div>
 
 <div align='center'>
@@ -29,10 +21,11 @@
     <a href='https://jdh-algo.github.io/Citrus-V/'><img src='https://img.shields.io/badge/Project-HomePage-Green'></a>
     <a href=''><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
     <a href='https://huggingface.co/jdh-algo/Citrus-V-8B-v1.0'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-Citrus--V%208B-yellow'></a>
-    <a href='https://huggingface.co/jdh-algo/Citrus-V-33B-v1.0'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-Citrus--V%2033B-yellow'></a>
-    <a href='https://huggingface.co/jdh-algo/Citrus-V-73B-v1.0'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-Citrus--V%2073B-yellow'></a>
+    <!-- <a href='https://huggingface.co/jdh-algo/Citrus-V-33B-v1.0'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-Citrus--V%2033B-yellow'></a> -->
+    <!-- <a href='https://huggingface.co/jdh-algo/Citrus-V-73B-v1.0'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-Citrus--V%2073B-yellow'></a> -->
     <a href='https://huggingface.co/datasets/jdh-algo/MeCoVQA-G-Plus'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-MeCoVQA--G--Plus-yellow'></a>
     <a href='https://huggingface.co/datasets/jdh-algo/MedXray-CoT'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-MedXray--CoT-yellow'></a>
+    <a href='https://huggingface.co/datasets/jdh-algo/MedDocBench'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-MedDocBench-yellow'></a>
 </div>
 
 <br>
@@ -219,3 +212,7 @@ If you use Citrus-V in your research, please cite our work:
   year={2024}
 }
 ```
+
+## 🤝 Acknowledgments
+
+We would like to thank the contributors to the [ms-swift](https://github.com/modelscope/ms-swift) and [SA2VA](https://github.com/magic-research/Sa2VA), [SAM2](https://github.com/facebookresearch/sam2), [Qwen2.5-VL](https://github.com/QwenLM/Qwen2.5-VL), and [mmdetection](https://github.com/open-mmlab/mmdetection) repositories, for their open research and extraordinary work.
