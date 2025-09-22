@@ -56,6 +56,7 @@ Medical imaging provides critical evidence for clinical diagnosis, treatment pla
 - [ ] Release Gradio Demo
 - [ ] Release 33B Model
 - [ ] Release 73B Model
+- [ ] Deploy & Inference
 
 
 ## 🛠️ Installation
@@ -203,29 +204,6 @@ swift sft \
 
 </details>
 
-### Deploy & Inference 
-
-1. Deploy
-
-```bash
-CUDA_VISIBLE_DEVICES=0,1,2,3 \
-MAX_PIXELS=65535 \
-VIDEO_MAX_PIXELS=50176 \
-FPS_MAX_FRAMES=12 \
-swift deploy \
-    --model /path/to/model \
-    --served_model_name CitrusV_8B \
-    --infer_backend pt \
-    --torch_dtype bfloat16 \
-    --port 8000
-```
-
-2. Inference with Deployment
-
-```bash 
-cd projects
-python inference_with_deploy.py
-```
 
 
 ## 🏛 License
