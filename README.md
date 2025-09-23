@@ -20,7 +20,7 @@
 
 <br>
 
-<div align='l'>
+<div align='center'>
     <a href='https://github.com/jdh-algo/Citrus-V'><img src='https://img.shields.io/github/stars/jdh-algo/Citrus-V?style=social'></a>
     <a href='https://jdh-algo.github.io/Citrus-V/'><img src='https://img.shields.io/badge/Project-HomePage-Green'></a>
     <a href=''><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
