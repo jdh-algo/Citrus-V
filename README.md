@@ -8,6 +8,8 @@
     Fangru Zhou&emsp; Haoqiang Xing&emsp; Zhenhong Yang
 </div>
 
+<br>
+
 <div align='center'>
     JDH Algo, JD Health International Inc.  
 </div>
@@ -16,7 +18,9 @@
     <sup>†</sup>Project Lead
 </div>
 
-<div align='center'>
+<br>
+
+<div align='l'>
     <a href='https://github.com/jdh-algo/Citrus-V'><img src='https://img.shields.io/github/stars/jdh-algo/Citrus-V?style=social'></a>
     <a href='https://jdh-algo.github.io/Citrus-V/'><img src='https://img.shields.io/badge/Project-HomePage-Green'></a>
     <a href=''><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
