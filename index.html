@@ -1109,9 +1109,9 @@ pre, code {
         </table>
   
       <h3>Training Strategy</h3>
-      <!-- <br style="display: block; margin-top: 10px;"> -->
+      <br style="display: block; margin-top: 10px;">
       <img src="source/images/fig_train_stages.png" style="display: block; margin: 0 auto; width: 100%; min-width: 900px; max-width: 1400px;">
-      <!-- <br style="display: block; margin-top: 10px;"> -->
+      <br style="display: block; margin-top: 10px;">
       <p><b>Concept Alignment: </b>In this stage, most model parameters are frozen, and only the MLLM projector together with the vision encoder are updated. Training primarily relies on image-caption pairs, which establish a stable mapping from visual features into the language space without disrupting the pretrained reasoning ability of the LLM. 
         This step provides a lightweight but essential initialization for subsequent multimodal alignment.</p>
       <br style="display: block; margin-top: 10px;">
