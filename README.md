@@ -127,9 +127,7 @@ python architectures/build_citrus_v_model.py
 
 ```
 
-
-
-#### Training stage 3
+### Training stage 3
 <details>
 <summary>View Complete Training Command</summary>
 
@@ -173,7 +171,7 @@ swift sft \
 
 </details>
 
-#### Training stage 4
+### Training stage 4
 <details>
 <summary>View Complete Training Command</summary>
 
