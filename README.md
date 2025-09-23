@@ -111,11 +111,9 @@ We recommend using the [official ms-swift documentation](https://swift.readthedo
 <!-- Here’s a quick example to get started with Citrus-V: this repo provides a pretrained checkpoint that has completed Stage 1 and Stage 2. The repo is designed for Stage 3 and Stage 4 training. -->
 <!-- The key difference is that Stage 3 performs full-network tuning and includes the HookGrad module. Stage 4 is the SAM-adaptation phase: every component is frozen except the SegProjector and SAM modules, which are jointly updated to align segmentation prompts with the Segment-Anything paradigm. -->
 
-<br>
 <img src="asset/fig_train_stages.png"/>
-<br>
 <p style="text-align:justify; text-justify:inter-word;">
-    <em>Four Training Stages of the Citrus-V. Shallow alignment for stable vision–language mapping, deep alignment for enhanced multimodal reasoning, instruction fine-tuning to strengthen instruction-following ability while encoding segmentation intent, and segmentation fine-tuning to adapt SAM2 for precise medical image segmentation. </em>
+    <em>Four Training Stages of the Citrus-V. Concept alignment for stable vision–language mapping, comprehension enhancement for enhanced multimodal reasoning, instruction fine-tuning to strengthen instruction-following ability while encoding segmentation intent, and segmentation fine-tuning to adapt SAM2 for precise medical image segmentation. </em>
     <br>
 </p>
 
