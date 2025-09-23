@@ -205,7 +205,7 @@ if __name__ == '__main__':
     )
     model = client.models.list().data[0].id
 
-    img_url = 'asset/test_0001.png'
+    img_url = '../asset/test_0001.png'
     if img_url.startswith('http'):
         image = Image.open(io.BytesIO(requests.get(img_url).content)).convert('RGB')
     else:

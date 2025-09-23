@@ -393,8 +393,12 @@ class CitrusVInferTemplate(CitrusVTemplate, Template):
         encoded.pop('masks', None)
         encoded.pop('g_pixel_values', None)
 
-        grounding_pixel_values = self.grounding_image_processor(inputs.images[0])
-        encoded['g_pixel_values'] = grounding_pixel_values  # 1, 3, 1024, 102o
+        if inputs.images:
+            grounding_pixel_values = self.grounding_image_processor(inputs.images[0])
+            encoded['g_pixel_values'] = grounding_pixel_values  # 1, 3, 1024, 1024
+        else:
+            grounding_pixel_values = torch.from_numpy(np.zeros((0, 3, self.image_size, self.image_size)).astype(np.float32))
+            encoded['g_pixel_values'] = grounding_pixel_values  # 0, 3, 1024, 1024
 
         return encoded
 
