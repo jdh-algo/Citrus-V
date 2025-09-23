@@ -171,7 +171,7 @@ pre, code {
         <br />
       </span>
       <span>JDH Algo, JD Health International Inc.</span>
-      <span><sup>†</sup>Project Leader</span>
+      <span><sup>†</sup>Project Lead</span>
       <div class="flex flex-gap" style="margin-bottom:0.5em;">
         <!-- arxiv Link -->
         <span class="link-block">
@@ -1119,10 +1119,10 @@ pre, code {
         This stage strengthens the MLLM’s multimodal comprehension capacity, while freezing the segmentation modules prevents premature interference from segmentation supervision.</p>
       <br style="display: block; margin-top: 10px;">
       <p><b>Instruction Fine-Tuning: </b>In the instruction fine-tuning stage, the MLLM is trained on the most diverse instruction-following data, including report generation, text-only instructions, OCR, grounding, 
-        medical VQA, reasoning-based chain-of-thought tasks, and segmentation instructions. All MLLM parameters are updated, whereas segmentation modules remain frozen. It is worth noting that our empirical results 
-        show that directly combining segmentation loss with other tasks can damage VQA performance significantly. To this end, for segmentation samples, the supervision is restricted to textual outputs containing 
-        the special "[SEG]" token, without applying mask-level losses. This design allows the MLLM to acquire the discourse patterns needed for segmentation queries and encode segmentation intent into the hidden 
-        state of the "[SEG]" token. </p>
+        medical VQA, reasoning-based chain-of-thought tasks, and segmentation instructions. It is worth noting that our empirical results 
+        show that directly combining segmentation loss with other tasks can damage VQA performance significantly. To this end, all MLLM parameters and segmentation modules are updated, while the gradient of segmentation modules is scaled by 0.001 with a hook function. 
+        In this way, for segmentation samples, the supervision is restricted to textual outputs containing the special "[SEG]" token, and applying a small mask-level loss. This design allows the MLLM to acquire the 
+        discourse patterns needed for segmentation queries and encode segmentation intent into the hidden state of the "[SEG]" token without losing other tasks' performance. </p>
       <br style="display: block; margin-top: 10px;">
       <p><b>Segmentation Fine-tuning: </b>At this stage, all MLLM parameters are frozen, and optimization focuses exclusively on segmentation components, including the segmentation projector, the segmentation 
         encoder, and the segmentation decoder. Unlike prior methods that freeze most of the segmentation backbone, the full SAM2 architecture, including the vision encoder, prompt encoder, and mask decoder, 
