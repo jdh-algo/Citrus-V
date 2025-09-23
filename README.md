@@ -101,21 +101,35 @@ git clone https://huggingface.co/jdh-algo/Citrus-V-8B-v1.0
 We recommend using the [official ms-swift documentation](https://swift.readthedocs.io/zh-cn/v3.8/Customization/%E8%87%AA%E5%AE%9A%E4%B9%89%E6%95%B0%E6%8D%AE%E9%9B%86.html) to prepare your custom training dataset.
 
 
-## 🚀 Training
+## ⚓️ Training
 
-### Training Section
-Here’s a quick example to get started with Citrus-V: this repo provides a pretrained checkpoint that has completed Stage 1 and Stage 2. The repo is designed for Stage 3 and Stage 4 training.
-The key difference is that Stage 3 performs full-network tuning and includes the HookGrad module. Stage 4 is the SAM-adaptation phase: every component is frozen except the SegProjector and SAM modules, which are jointly updated to align segmentation prompts with the Segment-Anything paradigm.
+<!-- ### Training Section -->
+<!-- Here’s a quick example to get started with Citrus-V: this repo provides a pretrained checkpoint that has completed Stage 1 and Stage 2. The repo is designed for Stage 3 and Stage 4 training. -->
+<!-- The key difference is that Stage 3 performs full-network tuning and includes the HookGrad module. Stage 4 is the SAM-adaptation phase: every component is frozen except the SegProjector and SAM modules, which are jointly updated to align segmentation prompts with the Segment-Anything paradigm. -->
 
-<p align="center">
-    <br>
-    <img src="asset/fig_train_stages.png"/>
-    <br>
-    <em>Four Training Stages of the Citrus-V</em>
+<br>
+<img src="asset/fig_train_stages.png"/>
+<br>
+<p style="text-align:justify; text-justify:inter-word;">
+    <em>Four Training Stages of the Citrus-V. Shallow alignment for stable vision–language mapping, deep alignment for enhanced multimodal reasoning, instruction fine-tuning to strengthen instruction-following ability while encoding segmentation intent, and segmentation fine-tuning to adapt SAM2 for precise medical image segmentation. </em>
     <br>
 </p>
 
-#### training stage 3
+
+### Training stage 1 & 2
+
+It is recommend to train from stage 3 using the pretrained Citrus-V model.
+
+To train the Citrus-V model from scratch, first build the original model using the following scripts:
+
+```bash 
+python architectures/build_citrus_v_model.py
+
+```
+
+
+
+#### Training stage 3
 <details>
 <summary>View Complete Training Command</summary>
 
@@ -159,7 +173,7 @@ swift sft \
 
 </details>
 
-#### training stage 4
+#### Training stage 4
 <details>
 <summary>View Complete Training Command</summary>
 
@@ -203,6 +217,38 @@ swift sft \
 ```
 
 </details>
+
+
+## 🚀 Deploy & Inference
+
+1. Deploy
+
+```bash
+CUDA_VISIBLE_DEVICES=0,1,2,3 \
+MAX_PIXELS=65535 \
+VIDEO_MAX_PIXELS=50176 \
+FPS_MAX_FRAMES=12 \
+swift deploy \
+    --model /path/to/Citrus-V-8B-v1.0 \
+    --served_model_name CitrusV_8B \
+    --template citrus_v_infer \
+    --infer_backend pt \
+    --torch_dtype bfloat16 \
+    --port 8000
+```
+
+2. Inference with Deployment
+
+```bash 
+cd projects
+python inference_with_deploy.py
+```
+
+3. Inference with [ms-swift](https://github.com/modelscope/ms-swift) PtEngine
+
+```bash 
+python inference.py --model /path/to/Citrus-V-8B-v1.0
+```
 
 
 
