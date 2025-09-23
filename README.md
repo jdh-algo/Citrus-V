@@ -56,7 +56,7 @@ Medical imaging provides critical evidence for clinical diagnosis, treatment pla
 - [ ] Release Gradio Demo
 - [ ] Release 33B Model
 - [ ] Release 73B Model
-- [ ] Deploy & Inference
+- [ x ] Deploy & Inference
 
 
 ## 🛠️ Installation
