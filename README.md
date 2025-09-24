@@ -3,17 +3,19 @@
 </h1>
 
 <div align='center'>
-    <span style="text-decoration:underline;">Guoxin Wang</span><sup>†</sup>&emsp;
-    <span style="text-decoration:underline;">Jun Zhao</span>&emsp;
-    <span style="text-decoration:underline;">Xinyi Liu</span>&emsp;
-    <span style="text-decoration:underline;">Yanbo Liu</span>&emsp;
-    <span style="text-decoration:underline;">Xuyang Cao</span>&emsp;
-    <span style="text-decoration:underline;">Chao Li</span>&emsp;
-    <span style="text-decoration:underline;">Zhuoyun Liu</span>&emsp;
-    <span style="text-decoration:underline;">Qintian Sun</span>&emsp;<br>
-    <span style="text-decoration:underline;">Fangru Zhou</span>&emsp;
-    <span style="text-decoration:underline;">Haoqiang Xing</span>&emsp;
-    <span style="text-decoration:underline;">Zhenhong Yang</span>
+    <span>
+        <a target="_blank" href="" onclick="return false;">Guoxin&nbsp;Wang</a><sup>†</sup>,
+        <a target="_blank" href="" onclick="return false;">Jun&nbsp;Zhao</a>,
+        <a target="_blank" href="" onclick="return false;">Xinyi&nbsp;Liu</a>,
+        <a target="_blank" href="" onclick="return false;">Yanbo&nbsp;Liu</a>,
+        <a target="_blank" href="" onclick="return false;">Xuyang&nbsp;Cao</a>,
+        <a target="_blank" href="" onclick="return false;">Chao&nbsp;Li</a>,
+        <a target="_blank" href="" onclick="return false;">Zhuoyun&nbsp;Liu</a>,
+        <a target="_blank" href="" onclick="return false;">Qintian&nbsp;Sun</a>, <br>
+        <a target="_blank" href="" onclick="return false;">Fangru&nbsp;Zhou</a>,
+        <a target="_blank" href="" onclick="return false;">Haoqiang&nbsp;Xing</a>,
+        <a target="_blank" href="" onclick="return false;">Zhenhong&nbsp;Yang</a>
+      </span>
 </div>
 
 <br>
