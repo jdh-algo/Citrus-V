@@ -3,9 +3,9 @@
 </h1>
 
 <div align='center'>
-    Guoxin Wang<sup>†</sup>&emsp; Jun Zhao&emsp; Xinyi Liu&emsp; Yanbo Liu&emsp;
-    Xuyang Cao&emsp; Chao Li&emsp; Zhuoyun Liu&emsp; Qintian Sun&emsp; <br>
-    Fangru Zhou&emsp; Haoqiang Xing&emsp; Zhenhong Yang
+    <u>Guoxin Wang</u><sup>†</sup>&emsp; <u>Jun Zhao</u>&emsp; <u>Xinyi Liu</u>&emsp; <u>Yanbo Liu</u>&emsp;
+<u>Xuyang Cao</u>&emsp; <u>Chao Li</u>&emsp; <u>Zhuoyun Liu</u>&emsp; <u>Qintian Sun</u>&emsp; <br>
+<u>Fangru Zhou</u>&emsp; <u>Haoqiang Xing</u>&emsp; <u>Zhenhong Yang</u>
 </div>
 
 <br>
@@ -21,7 +21,7 @@
 <br>
 
 <div align='center'>
-    <a href='https://github.com/jdh-algo/Citrus-V'><img src='https://img.shields.io/github/stars/jdh-algo/Citrus-V?style=social'></a>
+    <!-- <a href='https://github.com/jdh-algo/Citrus-V'><img src='https://img.shields.io/github/stars/jdh-algo/Citrus-V?style=social'></a> -->
     <a href='https://jdh-algo.github.io/Citrus-V/'><img src='https://img.shields.io/badge/Project-HomePage-Green'></a>
     <a href='https://arxiv.org/abs/2509.19090'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
     <a href='https://huggingface.co/jdh-algo/Citrus-V-8B-v1.0'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-Citrus--V%208B-yellow'></a>
@@ -259,11 +259,14 @@ This project is licensed under the Apache License (Version 2.0). For models and 
 If you use Citrus-V in your research, please cite our work:
 
 ```bibtex
-@article{citrusv2024,
-  title={Citrus-V: Advancing Medical Foundation Models with Unified Medical Image Grounding for Clinical Reasoning},
-  author={Guoxin Wang†, Jun Zhao, Xinyi Liu, Yanbo Liu, Xuyang Cao, Chao Li, Zhuoyun Liu, Qintian Sun, Fangru Zhou, Haoqiang Xing, Zhenhong Yang},
-  journal={arXiv preprint arXiv:XXXX.XXXXX},
-  year={2024}
+@misc{wang2025citrusvadvancingmedicalfoundation,
+    title={Citrus-V: Advancing Medical Foundation Models with Unified Medical Image Grounding for Clinical Reasoning}, 
+    author={Guoxin Wang, Jun Zhao, Xinyi Liu, Yanbo Liu, Xuyang Cao, Chao Li, Zhuoyun Liu, Qintian Sun, Fangru Zhou, Haoqiang Xing and Zhenhong Yang},
+    year={2025},
+    eprint={2509.19090},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV},
+    url={https://arxiv.org/abs/2509.19090}, 
 }
 ```
 
