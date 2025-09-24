@@ -23,7 +23,7 @@
 <div align='center'>
     <a href='https://github.com/jdh-algo/Citrus-V'><img src='https://img.shields.io/github/stars/jdh-algo/Citrus-V?style=social'></a>
     <a href='https://jdh-algo.github.io/Citrus-V/'><img src='https://img.shields.io/badge/Project-HomePage-Green'></a>
-    <a href=''><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
+    <a href='https://arxiv.org/abs/2509.19090'><img src='https://img.shields.io/badge/Paper-Arxiv-red'></a>
     <a href='https://huggingface.co/jdh-algo/Citrus-V-8B-v1.0'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-Citrus--V%208B-yellow'></a>
     <!-- <a href='https://huggingface.co/jdh-algo/Citrus-V-33B-v1.0'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-Citrus--V%2033B-yellow'></a> -->
     <!-- <a href='https://huggingface.co/jdh-algo/Citrus-V-73B-v1.0'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Huggingface-Citrus--V%2073B-yellow'></a> -->
