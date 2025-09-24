@@ -3,16 +3,16 @@
 </h1>
 
 <div align='center'>
-    <a target="_blank" href="" onclick="return false;">Guoxin&nbsp;Wang</a><sup>†</sup>
-    <a target="_blank" href="" onclick="return false;">Jun&nbsp;Zhao</a>
-    <a target="_blank" href="" onclick="return false;">Xinyi&nbsp;Liu</a>
-    <a target="_blank" href="" onclick="return false;">Yanbo&nbsp;Liu</a>
-    <a target="_blank" href="" onclick="return false;">Xuyang&nbsp;Cao</a>
-    <a target="_blank" href="" onclick="return false;">Chao&nbsp;Li</a>
-    <a target="_blank" href="" onclick="return false;">Zhuoyun&nbsp;Liu</a>
+    <a target="_blank" href="" onclick="return false;">Guoxin&nbsp;Wang</a><sup>†</sup>&nbsp
+    <a target="_blank" href="" onclick="return false;">Jun&nbsp;Zhao</a>&nbsp
+    <a target="_blank" href="" onclick="return false;">Xinyi&nbsp;Liu</a>&nbsp
+    <a target="_blank" href="" onclick="return false;">Yanbo&nbsp;Liu</a>&nbsp
+    <a target="_blank" href="" onclick="return false;">Xuyang&nbsp;Cao</a>&nbsp
+    <a target="_blank" href="" onclick="return false;">Chao&nbsp;Li</a>&nbsp
+    <a target="_blank" href="" onclick="return false;">Zhuoyun&nbsp;Liu</a>&nbsp
     <a target="_blank" href="" onclick="return false;">Qintian&nbsp;Sun</a> <br>
-    <a target="_blank" href="" onclick="return false;">Fangru&nbsp;Zhou</a>
-    <a target="_blank" href="" onclick="return false;">Haoqiang&nbsp;Xing</a>
+    <a target="_blank" href="" onclick="return false;">Fangru&nbsp;Zhou</a>&nbsp
+    <a target="_blank" href="" onclick="return false;">Haoqiang&nbsp;Xing</a>&nbsp
     <a target="_blank" href="" onclick="return false;">Zhenhong&nbsp;Yang</a>
 </div>
 
