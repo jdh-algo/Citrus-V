@@ -3,9 +3,17 @@
 </h1>
 
 <div align='center'>
-    <u>Guoxin Wang</u><sup>†</sup>&emsp; <u>Jun Zhao</u>&emsp; <u>Xinyi Liu</u>&emsp; <u>Yanbo Liu</u>&emsp;
-<u>Xuyang Cao</u>&emsp; <u>Chao Li</u>&emsp; <u>Zhuoyun Liu</u>&emsp; <u>Qintian Sun</u>&emsp; <br>
-<u>Fangru Zhou</u>&emsp; <u>Haoqiang Xing</u>&emsp; <u>Zhenhong Yang</u>
+    <span style="text-decoration:underline;">Guoxin Wang</span><sup>†</sup>&emsp;
+    <span style="text-decoration:underline;">Jun Zhao</span>&emsp;
+    <span style="text-decoration:underline;">Xinyi Liu</span>&emsp;
+    <span style="text-decoration:underline;">Yanbo Liu</span>&emsp;
+    <span style="text-decoration:underline;">Xuyang Cao</span>&emsp;
+    <span style="text-decoration:underline;">Chao Li</span>&emsp;
+    <span style="text-decoration:underline;">Zhuoyun Liu</span>&emsp;
+    <span style="text-decoration:underline;">Qintian Sun</span>&emsp;<br>
+    <span style="text-decoration:underline;">Fangru Zhou</span>&emsp;
+    <span style="text-decoration:underline;">Haoqiang Xing</span>&emsp;
+    <span style="text-decoration:underline;">Zhenhong Yang</span>
 </div>
 
 <br>
