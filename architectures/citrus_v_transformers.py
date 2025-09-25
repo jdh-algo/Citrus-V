@@ -10,6 +10,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 from architectures.sam2_train import SAM2TrainRunner
 from architectures.third_parts.mmdet.models.losses import CrossEntropyLoss, DiceLoss
+from architectures.vlm_utils.utils import deepcopy_generate_kwargs
+
 from transformers import AutoConfig, Qwen2_5_VLForConditionalGeneration
 from transformers.cache_utils import Cache
 from transformers.configuration_utils import PretrainedConfig
