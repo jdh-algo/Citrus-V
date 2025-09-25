@@ -1,4 +1,6 @@
 # Copyright (c) Alibaba, Inc. and its affiliates.
+# Modified by JD Health International Inc., 2025
+# Copyright (c) 2025 JD Health International Inc.
 # !/usr/bin/env python
 import os
 from setuptools import find_packages, setup
