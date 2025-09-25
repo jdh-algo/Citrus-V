@@ -483,73 +483,82 @@ class CitrusV(PreTrainedModel, GenerationMixin):
         return rle
 
     @torch.no_grad()
-    def generate(self,
-                 input_ids=None,
-                 pixel_values=None,
-                 masks=None,
-                 image_grid_thw=None,
-                 g_pixel_values=None,
-                 attention_mask=None,
-                 return_seg_masks=True,
-                 **kwargs):
-        device = self.device
-        if pixel_values is not None:
-            pixel_values = pixel_values.to(device)
-        if image_grid_thw is not None:
-            image_grid_thw = image_grid_thw.to(device)
+    def generate(
+        self,
+        input_ids=None,
+        pixel_values=None,
+        masks=None,
+        image_grid_thw=None,
+        g_pixel_values=None,
+        attention_mask=None,
+        return_seg_masks=True,
+        **kwargs
+    ):
+        with torch.no_grad():
+            device = self.device
+            if pixel_values is not None:
+                pixel_values=pixel_values.to(device)
+            if image_grid_thw is not None:
+                image_grid_thw=image_grid_thw.to(device)
 
-        generate_kwargs = dict(
-            input_ids=input_ids.to(device),
-            pixel_values=pixel_values,
-            image_grid_thw=image_grid_thw,
-            attention_mask=attention_mask.to(device),
-            **kwargs,
-        )
-        generate_output = self.mllm.generate(**generate_kwargs, output_hidden_states=True, return_dict_in_generate=True)
+            useargs = True
+            kwargs["use_cache"] = True
+            generate_kwargs = deepcopy_generate_kwargs(input_ids, pixel_values, image_grid_thw, attention_mask, device, useargs, **kwargs)
+            generate_output1 = self.mllm.generate(
+                                    output_hidden_states=False,
+                                    return_dict_in_generate=True,
+                                    **generate_kwargs,
+                                    )
+            seg_mask = generate_output1.sequences[0][:-1] == self.seg_token_idx
+            has_seg = seg_mask.any()
+            if not has_seg:
+                return {
+                    "sequences": generate_output1.sequences,
+                    "seg_masks": torch.empty(0),
+                    "seg_masks_rle": [],
+                }
+        
+            useargs = False
+            generate_kwargs = deepcopy_generate_kwargs(input_ids, pixel_values, image_grid_thw, attention_mask, device, useargs, **kwargs)
+            generate_output = self.mllm.generate(
+                                                output_hidden_states=True,
+                                                return_dict_in_generate=True,
+                                                **generate_kwargs,
+                                                )
+            hidden_states = generate_output.hidden_states
+            last_hidden_states = [item[-1][0] for item in hidden_states]
+            last_hidden_states = torch.cat(last_hidden_states, dim=0)
+            seg_mask = generate_output.sequences[0][:-1] == self.seg_token_idx
+    
+            seg_hidden_states = get_seg_hidden_states(last_hidden_states, generate_output.sequences[0][:-1], self.seg_token_idx)
+            
+            all_seg_hidden_states = self.seg_projector(seg_hidden_states)
+            ret_masks = []
+            for seg_hidden_states in all_seg_hidden_states:
+                seg_hidden_states = seg_hidden_states.unsqueeze(0)
+                sam_states = self.grounding_encoder.get_sam2_embeddings(g_pixel_values.to(device))
+                pred_masks = self.grounding_encoder.inject_language_embd(sam_states, seg_hidden_states.unsqueeze(1))
+    
+                masks = pred_masks[:, 0]
+                masks = masks.sigmoid() > 0.5
+                masks = masks.cpu().numpy()
+                ret_masks.append(masks)
+            if ret_masks:
+                all_masks = torch.from_numpy(np.concatenate(ret_masks, axis=0))
+            else:
+                all_masks = torch.empty(0)
 
-        hidden_states = generate_output.hidden_states
-        last_hidden_states = [item[-1][0] for item in hidden_states]
-        last_hidden_states = torch.cat(last_hidden_states, dim=0)
-
-        seg_mask = generate_output.sequences[0][:-1] == self.seg_token_idx
-        if not seg_mask.any():
+            seg_masks_rle = []
+            for mask in ret_masks:
+                for single_mask in mask:
+                    mask_np = single_mask.astype('uint8')
+                    seg_masks_rle.append(self.mask_to_rle(mask_np))
+    
             return {
-                'sequences': generate_output.sequences,
-                'seg_masks': torch.empty(0),
-                'seg_masks_rle': [],
+                "sequences": generate_output.sequences,
+                "seg_masks": all_masks,
+                "seg_masks_rle": seg_masks_rle,
             }
-
-        seg_hidden_states = get_seg_hidden_states(last_hidden_states, generate_output.sequences[0][:-1],
-                                                  self.seg_token_idx)
-
-        all_seg_hidden_states = self.seg_projector(seg_hidden_states)
-        ret_masks = []
-        for seg_hidden_states in all_seg_hidden_states:
-            seg_hidden_states = seg_hidden_states.unsqueeze(0)
-            sam_states = self.grounding_encoder.get_sam2_embeddings(g_pixel_values.to(device))
-            pred_masks = self.grounding_encoder.inject_language_embd(sam_states, seg_hidden_states.unsqueeze(1))
-
-            masks = pred_masks[:, 0]
-            masks = masks.sigmoid() > 0.5
-            masks = masks.cpu().numpy()
-            ret_masks.append(masks)
-
-        if ret_masks:
-            all_masks = torch.from_numpy(np.concatenate(ret_masks, axis=0))
-        else:
-            all_masks = torch.empty(0)
-
-        seg_masks_rle = []
-        for mask in ret_masks:
-            for single_mask in mask:
-                mask_np = single_mask.astype('uint8')
-                seg_masks_rle.append(self.mask_to_rle(mask_np))
-
-        return {
-            'sequences': generate_output.sequences,
-            'seg_masks': all_masks,
-            'seg_masks_rle': seg_masks_rle,
-        }
 
     def _reorder_cache(self, past_key_values, beam_idx):
         """
