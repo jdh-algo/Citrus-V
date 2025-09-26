@@ -65,7 +65,7 @@ Medical imaging provides critical evidence for clinical diagnosis, treatment pla
 
 ## 🚧 Opensource Progress
 
-- [ ] Release Gradio Demo
+- [x] Release Gradio/Streamlit Demo
 - [ ] Release 33B Model
 - [ ] Release 73B Model
 - [x] Deploy & Inference

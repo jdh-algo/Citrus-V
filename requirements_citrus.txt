@@ -45,3 +45,4 @@ triton==3.2.0
 vllm==0.8.2
 wandb==0.21.0
 xformers==0.0.29.post2
+streamlit==1.48.0
